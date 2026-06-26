@@ -263,4 +263,21 @@ body {
   100% { transform: rotate(0deg); }
 }
 
+/* Card 2: Cryogenic Levitation & Spin */
+.snowflake-float-wrap {
+  animation: snowflake-float 4s ease-in-out infinite alternate;
+}
+.snowflake-spin-wrap {
+  animation: snowflake-spin 30s linear infinite;
+}
+@keyframes snowflake-float {
+  0% { transform: translateY(-15px); }
+  100% { transform: translateY(15px); }
+}
+@keyframes snowflake-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
 

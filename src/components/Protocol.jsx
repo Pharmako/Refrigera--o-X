@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ShieldCheck, Wind, Gauge, Compass } from 'lucide-react';
+import { Wind, Gauge, Compass } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Protocol() {
   const containerRef = useRef(null);
+  const card2Ref = useRef(null);
+  const snowflakeRevealRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -51,6 +53,28 @@ export default function Protocol() {
           scrub: 1
         }
       });
+
+      // GSAP Scroll Reveal for Card 2 Snowflake
+      const revealEl = snowflakeRevealRef.current;
+      if (revealEl) {
+        gsap.fromTo(revealEl,
+          {
+            scale: 1.5,
+            filter: 'blur(15px)',
+          },
+          {
+            scale: 1,
+            filter: 'blur(0px)',
+            duration: 1.5,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card2Ref.current,
+              start: 'top 80%',
+              toggleActions: 'play none none none',
+            }
+          }
+        );
+      }
 
     }, containerRef);
 
@@ -160,8 +184,11 @@ export default function Protocol() {
           </div>
         </div>
 
-        {/* CARD 2: Laser Piping Scan */}
-        <div className="protocol-card sticky top-28 bg-[#F8F8F8] rounded-[2.5rem] p-8 md:p-12 border border-[#4682B4]/20 shadow-2xl text-[#1A2B3C] grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[500px]">
+        {/* CARD 2: Cryogenic Snowflake */}
+        <div 
+          ref={card2Ref}
+          className="protocol-card sticky top-28 bg-[#F8F8F8] rounded-[2.5rem] p-8 md:p-12 border border-[#4682B4]/20 shadow-2xl text-[#1A2B3C] grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[500px]"
+        >
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <div className="p-2.5 rounded-xl bg-[#0055D4]/10 text-[#0055D4]">
@@ -192,93 +219,53 @@ export default function Protocol() {
             </ul>
           </div>
 
-          {/* Isometric Pipe & Drain visual */}
+          {/* 2D Schematic Snowflake Visual */}
           <div className="flex justify-center items-center h-[260px] md:h-full bg-white rounded-3xl p-6 border border-[#4682B4]/10 shadow-inner relative overflow-hidden">
             {/* Engineering grid lines */}
             <div className="absolute inset-0 bg-[radial-gradient(#4682B4_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
             
-            <svg viewBox="0 0 200 200" className="w-48 h-48 relative z-10">
-              {/* Outer copper pipe (Gás) */}
-              <path 
-                d="M 20,50 L 120,100 H 180" 
-                fill="none" 
-                stroke="#D35400" 
-                strokeWidth="10" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-              />
-              {/* Inner gas flow wave (blue) */}
-              <path 
-                d="M 20,50 L 120,100 H 180" 
-                fill="none" 
-                stroke="#00D4FF" 
-                strokeWidth="3" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeDasharray="8 6" 
-                className="animate-pipe-flow"
-              />
-              
-              {/* Hexagon nut at connection (120, 100) */}
-              <polygon points="120,85 133,92 133,108 120,115 107,108 107,92" fill="#BDC3C7" stroke="#7F8C8D" strokeWidth="1.5" />
+            {/* GSAP Reveal Wrapper */}
+            <div ref={snowflakeRevealRef} className="w-48 h-48 relative z-10 flex items-center justify-center">
+              <svg 
+                viewBox="0 0 200 200" 
+                className="w-full h-full animate-[spin_40s_linear_infinite]"
+              >
+                <defs>
+                  {/* Aqui definimos um "braço" do floco de neve com estética de engenharia */}
+                  <g id="tech-branch">
+                    {/* Haste principal grossa (estilo dente de engrenagem) */}
+                    <line x1="100" y1="100" x2="100" y2="20" stroke="#1A2B3C" strokeWidth="8" strokeLinecap="square" />
+                    
+                    {/* Ramificação superior (Escura e grossa) */}
+                    <path d="M 85 45 L 100 30 L 115 45" fill="none" stroke="#1A2B3C" strokeWidth="8" strokeLinecap="square" strokeLinejoin="miter" />
+                    
+                    {/* Ramificação inferior (Azul clara e fina, combinando com o círculo fino) */}
+                    <path d="M 80 70 L 100 50 L 120 70" fill="none" stroke="#4682B4" strokeWidth="3" strokeLinecap="square" strokeLinejoin="miter" />
+                    
+                    {/* Ponto mecânico na ponta superior (idêntico à bolinha flutuando na engrenagem da sua print) */}
+                    <circle cx="100" cy="10" r="5.5" fill="#1A2B3C" />
+                  </g>
+                </defs>
 
-              {/* Wrench (Chave de Boca/Rosca) tightening the nut */}
-              <g className="animate-wrench" style={{ transformOrigin: '120px 100px' }}>
-                {/* Wrench handle */}
-                <rect x="65" y="96" width="45" height="8" rx="2" fill="#BDC3C7" stroke="#7F8C8D" strokeWidth="1" transform="rotate(-45 120 100)" />
-                {/* Wrench head */}
-                <circle cx="120" cy="100" r="14" fill="none" stroke="#BDC3C7" strokeWidth="4.5" />
-                {/* Wrench jaw cutout (white to overlay nut) */}
-                <polygon points="120,100 135,85 135,115" fill="#ffffff" />
-              </g>
+                {/* 1. Círculo Externo Tracejado (Traço exato da sua print) */}
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#1A2B3C" strokeWidth="6" strokeDasharray="6 8" />
+                
+                {/* 2. Círculo Interno Contínuo (Traço azul da sua print) */}
+                <circle cx="100" cy="100" r="65" fill="none" stroke="#4682B4" strokeWidth="2.5" />
 
-              {/* Screw head at (165, 70) */}
-              <g transform="translate(165, 70)">
-                <circle cx="0" cy="0" r="6" fill="#BDC3C7" stroke="#7F8C8D" strokeWidth="1" />
-                <line x1="-4" y1="-4" x2="4" y2="4" stroke="#7F8C8D" strokeWidth="2" className="animate-screw-rotate" style={{ transformOrigin: '0px 0px' }} />
-              </g>
+                {/* 3. Multiplicação do braço do floco de neve (Simetria de 6 pontas) */}
+                <use href="#tech-branch" transform="rotate(0 100 100)" />
+                <use href="#tech-branch" transform="rotate(60 100 100)" />
+                <use href="#tech-branch" transform="rotate(120 100 100)" />
+                <use href="#tech-branch" transform="rotate(180 100 100)" />
+                <use href="#tech-branch" transform="rotate(240 100 100)" />
+                <use href="#tech-branch" transform="rotate(300 100 100)" />
 
-              {/* Screwdriver (Chave de Fenda) tightening the screw */}
-              <g className="animate-screwdriver" style={{ transformOrigin: '165px 70px' }}>
-                {/* Shaft */}
-                <line x1="200" y1="35" x2="165" y2="70" stroke="#BDC3C7" strokeWidth="3" strokeLinecap="round" />
-                {/* Handle */}
-                <rect x="195" y="10" width="10" height="28" rx="3" fill="#0055D4" transform="rotate(45 200 35)" />
-              </g>
-
-              {/* Drain pipe (Dreno) */}
-              <path 
-                d="M 40,120 L 120,150 L 120,175" 
-                fill="none" 
-                stroke="#2980B9" 
-                strokeWidth="4" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                opacity="0.35" 
-              />
-              
-              {/* Checkmark ✅ at bottom of dreno */}
-              <g transform="translate(120, 175)" className="animate-check-pulse">
-                <circle cx="0" cy="0" r="9" fill="#10B981" />
-                <path 
-                  d="M -3.5,0 L -0.5,3 L 3.5,-2.5" 
-                  fill="none" 
-                  stroke="white" 
-                  strokeWidth="2.5" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                />
-              </g>
-
-              {/* Water droplet sliding along dreno path */}
-              <circle r="4" fill="#00D4FF" opacity="0.95" filter="drop-shadow(0 1px 3px rgba(0,212,255,0.4))">
-                <animateMotion 
-                  path="M 40,120 L 120,150 L 120,175" 
-                  dur="3s" 
-                  repeatCount="indefinite" 
-                />
-              </circle>
-            </svg>
+                {/* 4. Núcleo Mecânico (O eixo central) */}
+                <circle cx="100" cy="100" r="14" fill="#1A2B3C" />
+                <circle cx="100" cy="100" r="5" fill="#F8F8F8" />
+              </svg>
+            </div>
           </div>
         </div>
 
