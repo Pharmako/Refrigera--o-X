@@ -174,21 +174,23 @@ export default function Features() {
               return (
                 <div
                   key={card.id}
-                  className="absolute left-0 right-0 p-4 rounded-2xl bg-white border border-[#4682B4]/20 shadow-md transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] text-[#1A2B3C]"
+                  className="absolute left-0 right-0 h-[140px] p-4 rounded-2xl bg-white border border-[#4682B4]/20 shadow-md transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] text-[#1A2B3C] overflow-hidden"
                   style={{
                     transform: `translateY(${translateY}px) scale(${scale})`,
                     zIndex: zIndex,
                     opacity: opacity,
                   }}
                 >
-                  <div className="flex items-start gap-2 mb-1 text-left">
-                    <h4 className="font-outfit font-bold text-sm tracking-tight text-[#1A2B3C] leading-snug">
-                      {card.label}
-                    </h4>
+                  <div className={`transition-opacity duration-500 ${idx === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                    <div className="flex items-start gap-2 mb-1 text-left">
+                      <h4 className="font-outfit font-bold text-sm tracking-tight text-[#1A2B3C] leading-snug">
+                        {card.label}
+                      </h4>
+                    </div>
+                    <p className="text-[10px] font-plus-jakarta text-[#1A2B3C]/70 leading-relaxed text-left">
+                      {card.detail}
+                    </p>
                   </div>
-                  <p className="text-[10px] font-plus-jakarta text-[#1A2B3C]/70 leading-relaxed text-left">
-                    {card.detail}
-                  </p>
                 </div>
               );
             })}

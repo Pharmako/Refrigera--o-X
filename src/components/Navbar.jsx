@@ -27,7 +27,7 @@ export default function Navbar() {
         }`}
       >
         {/* Brand Logo & Emblem */}
-        <a href="#hero" className="flex items-center gap-3 group">
+        <a href="#hero" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
           {/* Glowing Geometric Ice Crystal SVG Emblem */}
           <div className="relative w-10 h-10 flex-shrink-0">
             <svg 
@@ -59,12 +59,12 @@ export default function Navbar() {
         </a>
 
         {/* CTA Button */}
-        <div>
+        <div className="flex-shrink-0">
           <a 
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="magnetic-btn relative overflow-hidden bg-[#0055D4] hover:bg-[#0055D4]/90 text-white font-outfit text-xs md:text-sm font-semibold px-4 py-2 md:px-6 md:py-2.5 rounded-full shadow-md shadow-[#0055D4]/20 hover:scale-105 transition-all duration-300"
+            className="magnetic-btn relative overflow-hidden bg-[#0055D4] hover:bg-[#0055D4]/90 text-white font-outfit text-[11px] sm:text-xs md:text-sm font-semibold px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-2.5 rounded-full shadow-md shadow-[#0055D4]/20 hover:scale-105 transition-all duration-300 whitespace-nowrap flex-shrink-0"
           >
             Falar no WhatsApp
           </a>
