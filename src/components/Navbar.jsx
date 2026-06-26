@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 flex justify-center transition-all duration-500">
       <div 
-        className={`w-full max-w-7xl flex items-center justify-between rounded-full px-6 py-3 md:px-8 md:py-4 transition-all duration-500 ${
+        className={`w-full max-w-7xl flex items-center justify-between gap-4 rounded-full px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 transition-all duration-500 ${
           isScrolled 
             ? 'bg-[#1A2B3C]/85 backdrop-blur-xl border border-[#0055D4]/40 text-[#F8F8F8] shadow-lg shadow-[#1A2B3C]/10' 
             : 'bg-transparent border border-transparent text-[#F8F8F8]'
@@ -52,7 +52,7 @@ export default function Navbar() {
             <span className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight leading-none text-white">
               JL FRIO
             </span>
-            <span className="text-[7px] md:text-[8px] font-jetbrains font-medium tracking-wide uppercase opacity-75 mt-0.5 max-w-[200px] leading-tight text-white/90">
+            <span className="text-[7px] md:text-[8px] font-jetbrains font-medium tracking-wide uppercase opacity-75 mt-0.5 max-w-[120px] sm:max-w-[200px] leading-tight text-white/90">
               Engenharia Térmica e Climatização
             </span>
           </div>
