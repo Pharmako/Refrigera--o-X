@@ -77,3 +77,190 @@ body {
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
+/* Custom SVG animations for Card 2 & Card 3 */
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Card 2: Copper Pipe Gas flow */
+.animate-pipe-flow {
+  animation: pipe-flow 4s linear infinite;
+}
+@keyframes pipe-flow {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+/* Card 2: Dreno pulse check */
+.animate-check-pulse {
+  animation: check-pulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes check-pulse {
+  0%, 85%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  90% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* Card 3: Scanning laser line moving down */
+.animate-scan-line {
+  animation: scan-line-anim 6s ease-in-out infinite;
+}
+@keyframes scan-line-anim {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(200px);
+    opacity: 1;
+  }
+  45% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  50%, 95% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+/* Card 3: Mask rectangle height growing down to reveal clean hélice */
+.animate-scan-clip {
+  animation: scan-clip-anim 6s ease-in-out infinite;
+}
+@keyframes scan-clip-anim {
+  0%, 100% {
+    height: 0;
+  }
+  40%, 85% {
+    height: 200px;
+  }
+  95% {
+    height: 0;
+  }
+}
+
+/* Card 3: Sparkles rising and fading */
+.animate-sparkle-1 {
+  animation: sparkle-float-1 6s ease-out infinite;
+}
+.animate-sparkle-2 {
+  animation: sparkle-float-2 6s ease-out infinite;
+}
+.animate-sparkle-3 {
+  animation: sparkle-float-3 6s ease-out infinite;
+}
+
+@keyframes sparkle-float-1 {
+  0%, 30%, 85%, 100% {
+    transform: translateY(20px) scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(0) scale(1.2);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-40px) scale(0.6);
+    opacity: 0.6;
+  }
+  80% {
+    transform: translateY(-50px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-float-2 {
+  0%, 35%, 85%, 100% {
+    transform: translateY(15px) scale(0);
+    opacity: 0;
+  }
+  45% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-35px) scale(0.5);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateY(-45px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle-float-3 {
+  0%, 25%, 85%, 100% {
+    transform: translateY(25px) scale(0);
+    opacity: 0;
+  }
+  35% {
+    transform: translateY(0) scale(1.4);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-45px) scale(0.7);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(-55px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Card 2: Wrench tightening keyframes */
+.animate-wrench {
+  animation: wrench-tighten 3s ease-in-out infinite;
+}
+@keyframes wrench-tighten {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(20deg); }
+  50% { transform: rotate(20deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Card 2: Screwdriver tightening keyframes */
+.animate-screwdriver {
+  animation: screwdriver-screw 3s ease-in-out infinite;
+}
+@keyframes screwdriver-screw {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-3px, 3px) rotate(10deg); }
+  35% { transform: translate(-3px, 3px) rotate(-40deg); }
+  50% { transform: translate(-3px, 3px) rotate(-40deg); }
+  70% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Card 2: Screw rotation keyframes */
+.animate-screw-rotate {
+  animation: screw-rotate 3s ease-in-out infinite;
+}
+@keyframes screw-rotate {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(10deg); }
+  35% { transform: rotate(-40deg); }
+  50% { transform: rotate(-40deg); }
+  70% { transform: rotate(-40deg); }
+  100% { transform: rotate(0deg); }
+}
+
+

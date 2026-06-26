@@ -87,26 +87,26 @@ export default function Protocol() {
                 <Gauge className="w-6 h-6" />
               </div>
               <span className="font-jetbrains text-xs font-semibold text-[#0055D4] tracking-widest uppercase">
-                Protocolo 01 // Compressor
+                VANTAGEM 01 // DESEMPENHO
               </span>
             </div>
             
             <h3 className="text-2xl md:text-4xl font-outfit font-extrabold tracking-tight uppercase">
-              Compressor Inverter Rotativo
+              MÁXIMA EFICIÊNCIA, MENOS GASTO
             </h3>
             
             <p className="text-sm text-[#1A2B3C]/75 font-plus-jakarta leading-relaxed">
-              O núcleo do sistema. Nosso compressor opera com modulação inteligente contínua, reduzindo picos de partida e modulando a vazão calórica com precisão infinitesimal.
+              Um ar-condicionado mal instalado ou sujo força o motor e gasta muita energia. Nós garantimos que seu equipamento trabalhe livre, gelando o ambiente rapidamente e pesando muito menos na sua conta de luz.
             </p>
 
             <ul className="space-y-2 text-xs font-jetbrains text-[#1A2B3C]/60">
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0055D4]"></span> 
-                Modulação contínua DC Inverter
+                Instalação rigorosa aos padrões do fabricante
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0055D4]"></span>
-                Redução de até 40% no consumo ativo
+                Vida útil prolongada do seu equipamento
               </li>
             </ul>
           </div>
@@ -168,54 +168,121 @@ export default function Protocol() {
                 <Compass className="w-6 h-6" />
               </div>
               <span className="font-jetbrains text-xs font-semibold text-[#0055D4] tracking-widest uppercase">
-                Protocolo 02 // Zoneamento
+                VANTAGEM 02 // INFRAESTRUTURA
               </span>
             </div>
             
             <h3 className="text-2xl md:text-4xl font-outfit font-extrabold tracking-tight uppercase">
-              Esqueleto de Tubulação Termoativa
+              INSTALAÇÃO LIMPA E SEM VAZAMENTOS
             </h3>
             
             <p className="text-sm text-[#1A2B3C]/75 font-plus-jakarta leading-relaxed">
-              Estrutura de rede de fluidos color-coded modelada tridimensionalmente para equalizar perdas e balancear a carga térmica entre áreas residenciais e comerciais.
+              Sabe aquele ar-condicionado que vive pingando na parede ou que "perde" o gás do nada? Isso é falha de tubulação. Usamos apenas materiais de primeira linha para que a água vá para o lugar certo e o gás fique onde deve estar.
             </p>
 
             <ul className="space-y-2 text-xs font-jetbrains text-[#1A2B3C]/60">
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0055D4]"></span> 
-                Tubulação certificada livre de vazamentos
+                Tubulação de cobre (resistente e anti-vazamento)
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0055D4]"></span>
-                Isolamento elastomérico de alto fator térmico
+                Isolamento e drenagem perfeitos (zero pinga-pinga)
               </li>
             </ul>
           </div>
 
-          {/* Scanning blueprint visual */}
-          <div className="flex justify-center items-center h-[260px] md:h-full bg-[#1A2B3C] rounded-3xl p-6 border border-[#0055D4]/30 shadow-inner relative overflow-hidden">
-            {/* Blueprint Grid */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,85,212,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,85,212,0.15)_1px,transparent_1px)] [background-size:20px_20px] opacity-40"></div>
+          {/* Isometric Pipe & Drain visual */}
+          <div className="flex justify-center items-center h-[260px] md:h-full bg-white rounded-3xl p-6 border border-[#4682B4]/10 shadow-inner relative overflow-hidden">
+            {/* Engineering grid lines */}
+            <div className="absolute inset-0 bg-[radial-gradient(#4682B4_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
             
-            {/* Technical drawing of pipes */}
             <svg viewBox="0 0 200 200" className="w-48 h-48 relative z-10">
-              {/* Cold pipe line */}
-              <path d="M 20,40 H 140 V 120 H 180" fill="none" stroke="#0055D4" strokeWidth="4" strokeLinecap="round" />
-              {/* Hot return pipe line */}
-              <path d="M 20,60 H 120 V 140 H 180" fill="none" stroke="#E74C3C" strokeWidth="4" strokeLinecap="round" />
-              {/* Connectors */}
-              <rect x="135" y="35" width="10" height="10" fill="#4682B4" />
-              <rect x="115" y="55" width="10" height="10" fill="#4682B4" />
-              <circle cx="20" cy="40" r="6" fill="#0055D4" />
-              <circle cx="20" cy="60" r="6" fill="#E74C3C" />
-            </svg>
+              {/* Outer copper pipe (Gás) */}
+              <path 
+                d="M 20,50 L 120,100 H 180" 
+                fill="none" 
+                stroke="#D35400" 
+                strokeWidth="10" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+              />
+              {/* Inner gas flow wave (blue) */}
+              <path 
+                d="M 20,50 L 120,100 H 180" 
+                fill="none" 
+                stroke="#00D4FF" 
+                strokeWidth="3" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeDasharray="8 6" 
+                className="animate-pipe-flow"
+              />
+              
+              {/* Hexagon nut at connection (120, 100) */}
+              <polygon points="120,85 133,92 133,108 120,115 107,108 107,92" fill="#BDC3C7" stroke="#7F8C8D" strokeWidth="1.5" />
 
-            {/* Glowing Laser Scan bar overlay */}
-            <div className="absolute left-0 right-0 h-0.5 bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)] z-20 animate-[bounce_4s_infinite]"></div>
+              {/* Wrench (Chave de Boca/Rosca) tightening the nut */}
+              <g className="animate-wrench" style={{ transformOrigin: '120px 100px' }}>
+                {/* Wrench handle */}
+                <rect x="65" y="96" width="45" height="8" rx="2" fill="#BDC3C7" stroke="#7F8C8D" strokeWidth="1" transform="rotate(-45 120 100)" />
+                {/* Wrench head */}
+                <circle cx="120" cy="100" r="14" fill="none" stroke="#BDC3C7" strokeWidth="4.5" />
+                {/* Wrench jaw cutout (white to overlay nut) */}
+                <polygon points="120,100 135,85 135,115" fill="#ffffff" />
+              </g>
+
+              {/* Screw head at (165, 70) */}
+              <g transform="translate(165, 70)">
+                <circle cx="0" cy="0" r="6" fill="#BDC3C7" stroke="#7F8C8D" strokeWidth="1" />
+                <line x1="-4" y1="-4" x2="4" y2="4" stroke="#7F8C8D" strokeWidth="2" className="animate-screw-rotate" style={{ transformOrigin: '0px 0px' }} />
+              </g>
+
+              {/* Screwdriver (Chave de Fenda) tightening the screw */}
+              <g className="animate-screwdriver" style={{ transformOrigin: '165px 70px' }}>
+                {/* Shaft */}
+                <line x1="200" y1="35" x2="165" y2="70" stroke="#BDC3C7" strokeWidth="3" strokeLinecap="round" />
+                {/* Handle */}
+                <rect x="195" y="10" width="10" height="28" rx="3" fill="#0055D4" transform="rotate(45 200 35)" />
+              </g>
+
+              {/* Drain pipe (Dreno) */}
+              <path 
+                d="M 40,120 L 120,150 L 120,175" 
+                fill="none" 
+                stroke="#2980B9" 
+                strokeWidth="4" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                opacity="0.35" 
+              />
+              
+              {/* Checkmark ✅ at bottom of dreno */}
+              <g transform="translate(120, 175)" className="animate-check-pulse">
+                <circle cx="0" cy="0" r="9" fill="#10B981" />
+                <path 
+                  d="M -3.5,0 L -0.5,3 L 3.5,-2.5" 
+                  fill="none" 
+                  stroke="white" 
+                  strokeWidth="2.5" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                />
+              </g>
+
+              {/* Water droplet sliding along dreno path */}
+              <circle r="4" fill="#00D4FF" opacity="0.95" filter="drop-shadow(0 1px 3px rgba(0,212,255,0.4))">
+                <animateMotion 
+                  path="M 40,120 L 120,150 L 120,175" 
+                  dur="3s" 
+                  repeatCount="indefinite" 
+                />
+              </circle>
+            </svg>
           </div>
         </div>
 
-        {/* CARD 3: Fluid Waveform */}
+        {/* CARD 3: Health / Air Purification */}
         <div className="protocol-card sticky top-28 bg-[#F8F8F8] rounded-[2.5rem] p-8 md:p-12 border border-[#4682B4]/20 shadow-2xl text-[#1A2B3C] grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[500px]">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
@@ -223,197 +290,84 @@ export default function Protocol() {
                 <Wind className="w-6 h-6" />
               </div>
               <span className="font-jetbrains text-xs font-semibold text-[#0055D4] tracking-widest uppercase">
-                Protocolo 03 // Termodinâmica
+                VANTAGEM 03 // SAÚDE E BEM-ESTAR
               </span>
             </div>
             
             <h3 className="text-2xl md:text-4xl font-outfit font-extrabold tracking-tight uppercase">
-              Ciclos Fluidodinâmicos
+              AR PURO DE VERDADE, SEM ALERGIAS
             </h3>
             
             <p className="text-sm text-[#1A2B3C]/75 font-plus-jakarta leading-relaxed">
-              Otimização de ondas térmicas baseado na troca calórica de gases ecológicos, evitando estrangulamentos na troca evaporador/condensador.
+              Um ar-condicionado sujo é o maior vilão das crises respiratórias e do mau cheiro no ambiente. Nossa higienização profunda vai muito além de "bater uma água" no filtro: eliminamos fungos, ácaros e bactérias para proteger a sua família ou seus clientes.
             </p>
 
             <ul className="space-y-2 text-xs font-jetbrains text-[#1A2B3C]/60">
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0055D4]"></span> 
-                Eco-refrigerante de baixíssimo GWP (R-32)
+                Limpeza profunda com produtos específicos
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0055D4]"></span>
-                Troca térmica maximizada por microcanais
+                Aplicação de bactericida profissional
               </li>
             </ul>
           </div>
 
-          {/* Flow waves visual */}
+          {/* Fan Scanning visual */}
           <div className="flex justify-center items-center h-[260px] md:h-full bg-white rounded-3xl p-6 border border-[#4682B4]/10 shadow-inner relative overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(#0055D4_1px,transparent_1px)] [background-size:24px_24px] opacity-5"></div>
+            {/* Engineering grid lines */}
+            <div className="absolute inset-0 bg-[radial-gradient(#4682B4_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
             
-            <svg viewBox="0 0 200 100" className="w-full h-32 relative z-10">
-              {/* Cold Flow wave */}
-              <path 
-                d="M 0,30 C 50,0 50,60 100,30 C 150,0 150,60 200,30" 
-                fill="none" 
-                stroke="#0055D4" 
-                strokeWidth="4" 
-                strokeDasharray="10 5" 
-                className="animate-[dash_8s_linear_infinite]"
-                style={{
-                  animation: 'dash-flow 10s linear infinite'
-                }}
-              />
-              {/* Hot Flow wave */}
-              <path 
-                d="M 0,70 C 50,100 50,40 100,70 C 150,100 150,40 200,70" 
-                fill="none" 
-                stroke="#E74C3C" 
-                strokeWidth="4" 
-                strokeDasharray="10 5" 
-                style={{
-                  animation: 'dash-flow-reverse 12s linear infinite'
-                }}
-              />
+            <svg viewBox="0 0 200 200" className="w-48 h-48 relative z-10">
+              <defs>
+                {/* Clean fan gradient */}
+                <linearGradient id="cleanFanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#00D4FF" />
+                  <stop offset="100%" stopColor="#0055D4" />
+                </linearGradient>
+                {/* Clip path for scan transition */}
+                <clipPath id="scanClip">
+                  <rect x="0" y="0" width="200" height="0" className="animate-scan-clip" />
+                </clipPath>
+              </defs>
+
+              {/* LAYER 1: Dirty Grey Fan */}
+              <g className="animate-spin-slow" style={{ transformOrigin: '100px 100px' }}>
+                <circle cx="100" cy="100" r="15" fill="#7F8C8D" />
+                {/* Blades (Grey) */}
+                <path d="M 100,85 C 80,60 90,30 100,30 C 110,30 120,60 100,85 Z" fill="#95A5A6" />
+                <path d="M 115,100 C 140,80 170,90 170,100 C 170,110 140,120 115,100 Z" fill="#95A5A6" />
+                <path d="M 100,115 C 120,140 110,170 100,170 C 90,170 80,140 100,115 Z" fill="#95A5A6" />
+                <path d="M 85,100 C 60,120 30,110 30,100 C 30,90 60,80 85,100 Z" fill="#95A5A6" />
+              </g>
+
+              {/* LAYER 2: Clean Crystal Blue Fan (Clipped) */}
+              <g clipPath="url(#scanClip)">
+                <g className="animate-spin-slow" style={{ transformOrigin: '100px 100px' }}>
+                  <circle cx="100" cy="100" r="15" fill="#00D4FF" filter="drop-shadow(0 0 4px rgba(0,212,255,0.6))" />
+                  {/* Blades (Crystalline) */}
+                  <path d="M 100,85 C 80,60 90,30 100,30 C 110,30 120,60 100,85 Z" fill="url(#cleanFanGrad)" filter="drop-shadow(0 0 6px rgba(0,85,212,0.4))" />
+                  <path d="M 115,100 C 140,80 170,90 170,100 C 170,110 140,120 115,100 Z" fill="url(#cleanFanGrad)" filter="drop-shadow(0 0 6px rgba(0,85,212,0.4))" />
+                  <path d="M 100,115 C 120,140 110,170 100,170 C 90,170 80,140 100,115 Z" fill="url(#cleanFanGrad)" filter="drop-shadow(0 0 6px rgba(0,85,212,0.4))" />
+                  <path d="M 85,100 C 60,120 30,110 30,100 C 30,90 60,80 85,100 Z" fill="url(#cleanFanGrad)" filter="drop-shadow(0 0 6px rgba(0,85,212,0.4))" />
+                </g>
+              </g>
+
+              {/* Scanning laser line overlay */}
+              <line x1="10" y1="0" x2="190" y2="0" stroke="#00D4FF" strokeWidth="2.5" className="animate-scan-line" filter="drop-shadow(0 0 4px #00D4FF)" />
+
+              {/* Clean Sparkles */}
+              <g className="animate-sparkle-1" transform="translate(60, 50)">
+                <path d="M 0,-4 L 1,-1 L 4,0 L 1,1 L 0,4 L -1,1 L -4,0 L -1,-1 Z" fill="#FFF" />
+              </g>
+              <g className="animate-sparkle-2" transform="translate(140, 65)">
+                <path d="M 0,-4 L 1,-1 L 4,0 L 1,1 L 0,4 L -1,1 L -4,0 L -1,-1 Z" fill="#00D4FF" />
+              </g>
+              <g className="animate-sparkle-3" transform="translate(100, 40)">
+                <path d="M 0,-4 L 1,-1 L 4,0 L 1,1 L 0,4 L -1,1 L -4,0 L -1,-1 Z" fill="#FFF" filter="drop-shadow(0 0 2px #00D4FF)" />
+              </g>
             </svg>
-            
-            {/* Quick inline keyframe injection */}
-            <style>{`
-              @keyframes dash-flow {
-                to { stroke-dashoffset: -100; }
-              }
-              @keyframes dash-flow-reverse {
-                to { stroke-dashoffset: 100; }
-              }
-            `}</style>
-          </div>
-        </div>
-
-        {/* CARD 4: LARGE VRF DIAGRAM CARD */}
-        <div className="protocol-card sticky top-28 bg-[#F8F8F8] rounded-[2.5rem] p-8 md:p-12 border border-[#0055D4]/30 shadow-2xl text-[#1A2B3C] flex flex-col justify-between min-h-[580px]">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-6">
-            <div className="lg:col-span-1 space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-[#0055D4]/10 text-[#0055D4]">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <span className="font-jetbrains text-xs font-semibold text-[#0055D4] tracking-widest uppercase">
-                  Mapeamento Geral // VRF
-                </span>
-              </div>
-              
-              <h3 className="text-2xl md:text-3xl font-outfit font-extrabold tracking-tight uppercase">
-                SOLUÇÕES VRF: CONFORTO MULTIZONAS
-              </h3>
-              
-              <p className="text-xs md:text-sm text-[#1A2B3C]/75 font-plus-jakarta leading-relaxed">
-                Diagrama técnico de interligação de fluxo térmico residencial ou empresarial. Uma única unidade externa (condensadora) gerencia e alimenta dinamicamente várias unidades evaporadoras internas (Hi-Wall, Cassete ou Dutos) conforme a demanda instantânea de cada espaço.
-              </p>
-            </div>
-
-            {/* Comprehensive Technical Diagram */}
-            <div className="lg:col-span-2 bg-[#1A2B3C] rounded-3xl p-6 border border-[#0055D4]/20 relative overflow-hidden min-h-[300px] flex flex-col justify-between">
-              {/* Structural grid blueprint background */}
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,85,212,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,85,212,0.1)_1px,transparent_1px)] [background-size:15px_15px] opacity-35"></div>
-              
-              <div className="relative z-10 flex items-center justify-between border-b border-[#F8F8F8]/10 pb-4 mb-4">
-                <span className="text-[9px] font-jetbrains tracking-wider text-[#4682B4] uppercase">
-                  Circuito de Automação Térmica // DIAGRAMA VRF
-                </span>
-                <span className="flex items-center gap-1.5 text-[9px] font-jetbrains text-emerald-400 font-bold bg-emerald-950/40 px-2 py-0.5 rounded-full border border-emerald-800">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  OPERACIONAL
-                </span>
-              </div>
-
-              {/* The VRF Architecture Illustration */}
-              <div className="relative z-10 flex-1 grid grid-cols-5 gap-4 items-center">
-                {/* Central Condenser Box */}
-                <div className="col-span-1.5 flex flex-col items-center gap-2 bg-[#F8F8F8]/5 border border-[#4682B4]/30 rounded-2xl p-3 text-center">
-                  <span className="text-[8px] font-jetbrains text-[#4682B4] tracking-widest uppercase">EXTERNA</span>
-                  <div className="w-12 h-12 rounded-xl bg-[#0055D4]/20 border border-[#0055D4]/50 flex items-center justify-center text-white">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="animate-spin-slow">
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M12 2v20M2 12h20M5.6 5.6l12.8 12.8M5.6 18.4L18.4 5.6" />
-                    </svg>
-                  </div>
-                  <span className="text-[10px] font-outfit font-extrabold text-[#F8F8F8]">CONDENSADOR</span>
-                  <span className="text-[8px] font-jetbrains text-emerald-400">STATUS: OK</span>
-                </div>
-
-                {/* Connecting Piping Lines (Branching) */}
-                <div className="col-span-2 h-full relative">
-                  <svg viewBox="0 0 100 100" className="w-full h-full" preserveAspectRatio="none">
-                    {/* Main trunks */}
-                    <line x1="0" y1="50" x2="40" y2="50" stroke="#0055D4" strokeWidth="3" />
-                    <line x1="0" y1="55" x2="40" y2="55" stroke="#E74C3C" strokeWidth="2" />
-                    
-                    {/* Branches to Top unit */}
-                    <path d="M 40,50 L 40,20 L 100,20" fill="none" stroke="#0055D4" strokeWidth="2" />
-                    <path d="M 40,55 L 42,25 L 100,25" fill="none" stroke="#E74C3C" strokeWidth="1.5" />
-                    
-                    {/* Branches to Center unit */}
-                    <line x1="40" y1="50" x2="100" y2="50" stroke="#0055D4" strokeWidth="2" />
-                    <line x1="40" y1="55" x2="100" y2="55" stroke="#E74C3C" strokeWidth="1.5" />
-
-                    {/* Branches to Bottom unit */}
-                    <path d="M 40,50 L 40,80 L 100,80" fill="none" stroke="#0055D4" strokeWidth="2" />
-                    <path d="M 40,55 L 42,75 L 100,75" fill="none" stroke="#E74C3C" strokeWidth="1.5" />
-                  </svg>
-                  {/* Glowing pulses running along */}
-                  <span className="absolute w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_6px_#22d3ee] top-[16%] left-[45%] animate-[pulse-path-1_3s_linear_infinite]"></span>
-                  <span className="absolute w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_6px_#22d3ee] top-[46%] left-[55%] animate-[pulse-path-2_2s_linear_infinite]"></span>
-                  <span className="absolute w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_6px_#22d3ee] top-[76%] left-[45%] animate-[pulse-path-3_4s_linear_infinite]"></span>
-                </div>
-
-                {/* Evaporator Units (Indoor) */}
-                <div className="col-span-1.5 space-y-3">
-                  {/* Unit 1 */}
-                  <div className="flex items-center justify-between gap-2 bg-[#F8F8F8]/5 border border-[#F8F8F8]/10 rounded-xl p-2">
-                    <div className="text-left">
-                      <span className="text-[7px] font-jetbrains text-[#4682B4] block uppercase">ZONA 01 // COZINHA</span>
-                      <span className="text-[9px] font-outfit font-bold text-[#F8F8F8] uppercase">Evaporador A</span>
-                    </div>
-                    <span className="text-[10px] font-jetbrains text-cyan-400 font-bold bg-[#0055D4]/20 px-2 py-0.5 rounded border border-[#0055D4]/30">21.5°C</span>
-                  </div>
-
-                  {/* Unit 2 */}
-                  <div className="flex items-center justify-between gap-2 bg-[#F8F8F8]/5 border border-[#F8F8F8]/10 rounded-xl p-2">
-                    <div className="text-left">
-                      <span className="text-[7px] font-jetbrains text-[#4682B4] block uppercase">ZONA 02 // SALA</span>
-                      <span className="text-[9px] font-outfit font-bold text-[#F8F8F8] uppercase">Evaporador B</span>
-                    </div>
-                    <span className="text-[10px] font-jetbrains text-cyan-400 font-bold bg-[#0055D4]/20 px-2 py-0.5 rounded border border-[#0055D4]/30">22.0°C</span>
-                  </div>
-
-                  {/* Unit 3 */}
-                  <div className="flex items-center justify-between gap-2 bg-[#F8F8F8]/5 border border-[#F8F8F8]/10 rounded-xl p-2">
-                    <div className="text-left">
-                      <span className="text-[7px] font-jetbrains text-[#4682B4] block uppercase">ZONA 03 // SUÍTE</span>
-                      <span className="text-[9px] font-outfit font-bold text-[#F8F8F8] uppercase">Evaporador C</span>
-                    </div>
-                    <span className="text-[10px] font-jetbrains text-cyan-400 font-bold bg-[#0055D4]/20 px-2 py-0.5 rounded border border-[#0055D4]/30">19.0°C</span>
-                  </div>
-                </div>
-              </div>
-              
-              <style>{`
-                @keyframes pulse-path-1 {
-                  0% { left: 40%; top: 48%; }
-                  50% { left: 40%; top: 16%; }
-                  100% { left: 95%; top: 16%; opacity: 0; }
-                }
-                @keyframes pulse-path-2 {
-                  0% { left: 40%; top: 48%; }
-                  100% { left: 95%; top: 48%; opacity: 0; }
-                }
-                @keyframes pulse-path-3 {
-                  0% { left: 40%; top: 48%; }
-                  50% { left: 40%; top: 76%; }
-                  100% { left: 95%; top: 76%; opacity: 0; }
-                }
-              `}</style>
-            </div>
           </div>
         </div>
 
