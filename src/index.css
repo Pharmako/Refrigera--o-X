@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ice-gray: #F8F8F8;
+  --color-steel-blue: #4682B4;
+  --color-night-blue: #1A2B3C;
+  --color-cobalt: #0055D4;
+  --color-charcoal: #2A2A2A;
+
+  --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+}
+
+/* Custom Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(26, 43, 60, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 85, 212, 0.2);
+}
+
+/* CSS Noise Overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Scroll Snap Stack Styles */
+.stack-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F8F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #4682B4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0055D4;
+}
+
+/* Magnetic Button Slide Animation */
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.magnetic-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s ease;
+}
+.magnetic-btn:hover::after {
+  left: 100%;
+}
