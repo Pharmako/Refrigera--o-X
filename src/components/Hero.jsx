@@ -5,6 +5,8 @@ export default function Hero() {
   const containerRef = useRef(null);
   const textGroupRef = useRef(null);
 
+  const whatsappUrl = "https://wa.me/5531998102577?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Staggered fade-up animation for the text lines and scroll indicator
@@ -106,43 +108,41 @@ export default function Hero() {
         <div className="hero-badge flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0055D4]/20 border border-[#0055D4]/30 backdrop-blur-md mb-6">
           <span className="w-2 h-2 rounded-full bg-[#0055D4] animate-pulse"></span>
           <span className="text-[10px] md:text-xs font-jetbrains font-semibold tracking-wider text-[#F8F8F8] uppercase">
-            Sistemas Térmicos Avançados
+            Climatização Residencial e Comercial
           </span>
         </div>
 
         {/* Massive Typography Hero Text */}
         <h1 className="flex flex-col gap-2 max-w-4xl font-outfit text-white">
-          <span className="hero-line text-xs md:text-sm font-jetbrains font-medium tracking-[0.25em] text-[#0055D4] uppercase">
-            CONFORTO CLIMÁTICO, GARANTIDO
+          <span className="hero-line text-xs md:text-sm font-jetbrains font-medium tracking-[0.25em] text-cyan-400 uppercase">
+            Conforto e Saúde para sua Família
           </span>
-          <span className="hero-line text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] uppercase">
-            Alta Engenharia
+
+          <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] uppercase">
+            O clima perfeito,
           </span>
-          <span className="hero-line text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] text-[#4682B4] italic uppercase">
-            Para seu Espaço Diário
+          <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-[#4682B4] italic uppercase">
+            Sem dor de cabeça.
           </span>
         </h1>
 
-        <p className="hero-line max-w-xl text-sm md:text-base text-[#F8F8F8]/80 font-plus-jakarta mt-6 leading-relaxed">
-          Climatização silenciosa, eficiente e projetada sob medida para residências de alto padrão e empreendimentos comerciais de precisão.
+        <p className="hero-line max-w-2xl text-sm md:text-base text-[#F8F8F8]/80 font-plus-jakarta mt-6 leading-relaxed text-left">
+          Cuidamos do ar que você respira. Seja para instalar um equipamento novo, resolver uma falha ou fazer aquela limpeza essencial, garantimos um ambiente climatizado e confortável.
         </p>
 
         {/* Action Button & Floating Indicator */}
         <div className="hero-line flex flex-wrap gap-4 mt-8 items-center">
           <a 
-            href="#solutions" 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="magnetic-btn relative overflow-hidden bg-[#0055D4] text-white hover:bg-[#0055D4]/90 px-8 py-3.5 rounded-full font-outfit text-sm font-bold tracking-wide shadow-lg shadow-[#0055D4]/20 hover:scale-105 transition-all duration-300"
           >
-            Explorar Soluções
-          </a>
-          <a 
-            href="#contracts" 
-            className="magnetic-btn relative overflow-hidden border border-[#F8F8F8]/20 bg-[#F8F8F8]/5 text-[#F8F8F8] hover:bg-[#F8F8F8]/10 px-8 py-3.5 rounded-full font-outfit text-sm font-bold tracking-wide transition-all"
-          >
-            Solicitar Orçamento
+            Falar com um Especialista
           </a>
         </div>
       </div>
+
 
       {/* Animated Scroll Indicator */}
       <div className="scroll-indicator absolute bottom-8 right-8 md:right-12 z-10 flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors cursor-pointer">

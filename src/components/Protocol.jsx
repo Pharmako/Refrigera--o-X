@@ -59,19 +59,20 @@ export default function Protocol() {
 
   return (
     <section 
+      id="protocol"
       ref={containerRef}
       className="w-full bg-[#1A2B3C] py-24 relative select-none"
     >
       {/* Title */}
       <div className="max-w-6xl mx-auto px-6 md:px-8 mb-20 text-center">
         <span className="text-xs md:text-sm font-jetbrains font-semibold tracking-wider text-[#0055D4] uppercase block mb-3">
-          Protocolos e Arquitetura Térmica
+          NOSSO PADRÃO DE QUALIDADE
         </span>
         <h2 className="font-outfit text-3xl md:text-5xl font-extrabold tracking-tight text-[#F8F8F8] uppercase">
-          Multissoluções Integradas
+          QUALIDADE EM CADA DETALHE
         </h2>
         <p className="max-w-xl mx-auto text-xs md:text-sm text-[#F8F8F8]/60 font-plus-jakarta mt-4">
-          Conheça os detalhes de engenharia por trás do clima perfeito. Role para analisar os módulos funcionais.
+          Role a página e entenda como nossa instalação e manutenção garantem um ar-condicionado que gela mais, dura mais tempo e não te dá dor de cabeça.
         </p>
       </div>
 

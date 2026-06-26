@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import Philosophy from './components/Philosophy';
 import Protocol from './components/Protocol';
 import ContractsFooter from './components/ContractsFooter';
 
@@ -17,9 +16,6 @@ function App() {
 
       {/* Features: Dashboard */}
       <Features />
-
-      {/* Philosophy: Manifesto */}
-      <Philosophy />
 
       {/* Protocol: Sticky Stacking Archive */}
       <Protocol />
