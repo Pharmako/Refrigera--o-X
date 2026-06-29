@@ -51,7 +51,7 @@ export default function Features() {
   const [activeDay, setActiveDay] = useState(null); // 'Q' (Wednesday) will be clicked
   const [isSaved, setIsSaved] = useState(false);
 
-  const whatsappUrl = "https://wa.me/5531998102577?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+visita+t%C3%A9cnica.";
+  const whatsappUrl = "https://wa.me/5531992134194?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+visita+t%C3%A9cnica.";
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -128,14 +128,14 @@ export default function Features() {
   }, []);
 
   return (
-    <section id="features" className="w-full py-24 md:py-32 bg-[#F8F8F8] relative overflow-hidden select-none">
+    <section id="features" className="w-full py-24 md:py-32 bg-[#FFFFFF] relative overflow-hidden select-none">
       {/* Title Section (Single left-aligned block, right text removed) */}
       <div className="max-w-7xl mx-auto px-6 md:px-8 mb-16 flex flex-col items-start gap-4">
         <div>
-          <span className="text-xs md:text-sm font-jetbrains font-semibold tracking-wider text-[#0055D4] bg-[#0055D4]/10 px-4 py-1.5 rounded-full uppercase block mb-3 w-fit">
+          <span className="text-xs md:text-sm font-jetbrains font-semibold tracking-wider text-[#0F4A2C] bg-[#0F4A2C]/10 px-4 py-1.5 rounded-full uppercase block mb-3 w-fit">
             NOSSAS ESPECIALIDADES
           </span>
-          <h2 className="font-outfit text-3xl md:text-5xl font-extrabold tracking-tight text-[#1A2B3C] uppercase text-left leading-[1.1] max-w-3xl">
+          <h2 className="font-outfit text-3xl md:text-5xl font-extrabold tracking-tight text-[#1A1A1A] uppercase text-left leading-[1.1] max-w-3xl">
             SOLUÇÕES COMPLETAS EM CLIMATIZAÇÃO
           </h2>
         </div>
@@ -145,19 +145,19 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         
         {/* Card 1: Diagnostic Shuffler (Instalação) */}
-        <div className="rounded-[2.5rem] bg-[#1A2B3C] p-8 md:p-10 flex flex-col justify-between border border-[#0055D4]/10 shadow-lg text-[#F8F8F8] relative h-[450px] overflow-hidden">
+        <div className="rounded-[2.5rem] bg-[#E0E4E1] p-8 md:p-10 flex flex-col justify-between border border-[#0F4A2C]/10 shadow-lg text-[#1A1A1A] relative h-[450px] overflow-hidden">
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-8">
-              <span className="text-[10px] font-jetbrains tracking-wider text-[#4682B4] uppercase">
+              <span className="text-[10px] font-jetbrains tracking-wider text-[#0F4A2C] uppercase">
                 SERVIÇO 01 // INSTALAÇÃO
               </span>
-              <Settings className="w-5 h-5 text-[#0055D4] animate-spin-slow" />
+              <Settings className="w-5 h-5 text-[#0F4A2C] animate-spin-slow" />
             </div>
             
             <h3 className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight mb-2 uppercase text-left">
               Projetos e Instalações Seguras
             </h3>
-            <p className="text-xs text-white/60 font-plus-jakarta mb-4 text-left">
+            <p className="text-xs text-[#1A1A1A]/70 font-plus-jakarta mb-4 text-left">
               A animação dos cartões empilhados mostra nossos diferenciais de uma instalação bem feita.
             </p>
           </div>
@@ -174,7 +174,7 @@ export default function Features() {
               return (
                 <div
                   key={card.id}
-                  className="absolute left-0 right-0 h-[140px] p-4 rounded-2xl bg-white border border-[#4682B4]/20 shadow-md transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] text-[#1A2B3C] overflow-hidden"
+                  className="absolute left-0 right-0 h-[140px] p-4 rounded-2xl bg-white border border-[#E0E4E1] shadow-md transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] text-[#1A1A1A] overflow-hidden"
                   style={{
                     transform: `translateY(${translateY}px) scale(${scale})`,
                     zIndex: zIndex,
@@ -183,11 +183,11 @@ export default function Features() {
                 >
                   <div className={`transition-opacity duration-500 ${idx === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                     <div className="flex items-start gap-2 mb-1 text-left">
-                      <h4 className="font-outfit font-bold text-sm tracking-tight text-[#1A2B3C] leading-snug">
+                      <h4 className="font-outfit font-bold text-sm tracking-tight text-[#1A1A1A] leading-snug">
                         {card.label}
                       </h4>
                     </div>
-                    <p className="text-[10px] font-plus-jakarta text-[#1A2B3C]/70 leading-relaxed text-left">
+                    <p className="text-[10px] font-plus-jakarta text-[#1A1A1A]/80 leading-relaxed text-left">
                       {card.detail}
                     </p>
                   </div>
@@ -198,33 +198,33 @@ export default function Features() {
         </div>
 
         {/* Card 2: Manual Checklist (Manutenção) */}
-        <div className="rounded-[2.5rem] bg-[#1A2B3C] p-8 md:p-10 flex flex-col justify-between border border-[#0055D4]/10 shadow-lg text-[#F8F8F8] h-[450px]">
+        <div className="rounded-[2.5rem] bg-[#E0E4E1] p-8 md:p-10 flex flex-col justify-between border border-[#0F4A2C]/10 shadow-lg text-[#1A1A1A] h-[450px]">
           <div>
             <div className="flex items-center justify-between mb-8">
-              <span className="text-[10px] font-jetbrains tracking-wider text-[#4682B4] uppercase">
+              <span className="text-[10px] font-jetbrains tracking-wider text-[#0F4A2C] uppercase">
                 SERVIÇO 02 // MANUTENÇÃO
               </span>
               <div className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0F4A2C] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0F4A2C]"></span>
                 </span>
-                <span className="text-[10px] font-jetbrains font-semibold text-cyan-400 tracking-widest uppercase">
+                <span className="text-[10px] font-jetbrains font-semibold text-[#0F4A2C] tracking-widest uppercase">
                   HIGIENIZAÇÃO ATIVA
                 </span>
               </div>
             </div>
             
-            <h3 className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight mb-2 uppercase text-left text-white">
+            <h3 className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight mb-2 uppercase text-left text-[#1A1A1A]">
               Checkup de Limpeza e Reparos
             </h3>
-            <p className="text-xs text-white/60 font-plus-jakarta mb-4 text-left">
+            <p className="text-xs text-[#1A1A1A]/70 font-plus-jakarta mb-4 text-left">
               Não espere o equipamento quebrar. Realizamos preventivas completas para garantir um ar puro e economia de energia.
             </p>
           </div>
 
           {/* Checklist Area */}
-          <div className="flex-1 flex flex-col bg-[#111E2D] rounded-2xl p-5 border border-[#4682B4]/20 justify-center gap-3.5 overflow-hidden">
+          <div className="flex-1 flex flex-col bg-white rounded-2xl p-5 border border-[#E0E4E1] justify-center gap-3.5 overflow-hidden">
             {checklistItems.map((item, idx) => {
               const isChecked = idx < checkedCount;
               const isCurrent = idx === checkedCount;
@@ -243,10 +243,10 @@ export default function Features() {
                   <div 
                     className={`w-5 h-5 rounded flex items-center justify-center flex-shrink-0 transition-all duration-500 border ${
                       isChecked 
-                        ? 'bg-emerald-500 border-emerald-500 text-white scale-110 shadow-md shadow-emerald-500/20' 
+                        ? 'bg-[#0F4A2C] border-[#0F4A2C] text-white scale-110 shadow-md shadow-[#0F4A2C]/20' 
                         : isCurrent
-                          ? 'border-cyan-400 bg-cyan-400/10 animate-pulse'
-                          : 'border-white/30 bg-transparent'
+                          ? 'border-[#0F4A2C] bg-[#0F4A2C]/10 animate-pulse'
+                          : 'border-[#1A1A1A]/30 bg-transparent'
                     }`}
                   >
                     {isChecked && <Check className="w-3.5 h-3.5 stroke-[3]" />}
@@ -255,11 +255,11 @@ export default function Features() {
                   {/* Checklist Text */}
                   <div className="font-jetbrains text-[10px] md:text-xs">
                     <span className={`font-extrabold uppercase mr-1.5 ${
-                      isChecked ? 'text-emerald-400' : isCurrent ? 'text-cyan-400' : 'text-[#4682B4]'
+                      isChecked ? 'text-[#0F4A2C]' : isCurrent ? 'text-[#0F4A2C]/90' : 'text-[#1A1A1A]/60'
                     }`}>
                       {item.label}:
                     </span>
-                    <span className="text-white font-medium">{item.text}</span>
+                    <span className="text-[#1A1A1A] font-medium">{item.text}</span>
                   </div>
                 </div>
               );
@@ -270,11 +270,11 @@ export default function Features() {
         {/* Card 3: Scheduler (Suporte/Agendamento) */}
         <div 
           ref={schedulerRef}
-          className="rounded-[2.5rem] bg-white p-8 md:p-10 flex flex-col justify-between border border-[#4682B4]/15 shadow-xl text-[#1A2B3C] h-[450px] relative overflow-hidden"
+          className="rounded-[2.5rem] bg-[#E0E4E1] p-8 md:p-10 flex flex-col justify-between border border-[#0F4A2C]/10 shadow-xl text-[#1A1A1A] h-[450px] relative overflow-hidden"
         >
           <div>
             <div className="flex items-center justify-between mb-8">
-              <span className="text-[10px] font-jetbrains tracking-wider text-[#4682B4] uppercase">
+              <span className="text-[10px] font-jetbrains tracking-wider text-[#0F4A2C] uppercase">
                 ATENDIMENTO // SUPORTE
               </span>
               <span className="text-lg">🗓️</span>
@@ -283,13 +283,13 @@ export default function Features() {
             <h3 className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight mb-2 uppercase text-left">
               Agende Já o Seu Atendimento
             </h3>
-            <p className="text-xs text-[#1A2B3C]/60 font-plus-jakarta mb-4 text-left">
+            <p className="text-xs text-[#1A1A1A]/70 font-plus-jakarta mb-4 text-left">
               Seu ar parou ou precisa de uma limpeza urgente? Escolha o melhor dia e deixe o trabalho pesado com a nossa equipe.
             </p>
           </div>
 
           {/* Scheduler Calendar Interface */}
-          <div className="relative flex-1 flex flex-col items-center justify-center bg-[#F8F8F8] rounded-2xl p-4 border border-[#4682B4]/10">
+          <div className="relative flex-1 flex flex-col items-center justify-center bg-white rounded-2xl p-4 border border-[#E0E4E1]">
             {/* Week buttons */}
             <div className="flex gap-1.5 mb-6">
               {['D', 'S', 'T', 'Q', 'Q', 'S', 'S'].map((day, idx) => {
@@ -300,10 +300,10 @@ export default function Features() {
                     key={idx}
                     className={`day-btn w-7 h-7 rounded-lg flex items-center justify-center font-outfit text-xs font-bold transition-all duration-300 border ${
                       isActive 
-                        ? 'bg-[#0055D4] border-[#0055D4] text-white shadow-md shadow-[#0055D4]/20' 
+                        ? 'bg-[#0F4A2C] border-[#0F4A2C] text-white shadow-md shadow-[#0F4A2C]/20' 
                         : isWed 
-                          ? 'day-btn-wed border-[#4682B4]/30 bg-white text-[#1A2B3C]' 
-                          : 'border-[#4682B4]/15 bg-white text-[#1A2B3C]/40'
+                          ? 'day-btn-wed border-[#E0E4E1] bg-white text-[#1A1A1A]' 
+                          : 'border-[#0F4A2C]/10 bg-white text-[#1A1A1A]/40'
                     }`}
                   >
                     {day}
@@ -319,8 +319,8 @@ export default function Features() {
               rel="noopener noreferrer"
               className={`save-btn px-5 py-2.5 rounded-full font-outfit text-2xs md:text-xs font-bold tracking-wider text-center transition-all duration-500 border block ${
                 isSaved 
-                  ? 'bg-emerald-500 border-emerald-500 text-white shadow-md' 
-                  : 'bg-[#0055D4] border-[#0055D4] text-white hover:bg-[#0055D4]/90'
+                  ? 'bg-[#0F4A2C] border-[#0F4A2C] text-white shadow-md' 
+                  : 'bg-[#0F4A2C] border-[#0F4A2C] text-white hover:bg-[#0F4A2C]/90'
               }`}
             >
               {isSaved ? 'SOLICITAÇÃO ENVIADA ✓' : 'Solicitar Visita Técnica'}
@@ -335,7 +335,7 @@ export default function Features() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path 
                   d="M4.5 3V17.5L9.5 13.5L14.5 21.5L17.5 19.5L12.5 12L18.5 11.5L4.5 3Z" 
-                  fill="#0055D4" 
+                  fill="#0F4A2C" 
                   stroke="white" 
                   strokeWidth="2" 
                   strokeLinejoin="round"

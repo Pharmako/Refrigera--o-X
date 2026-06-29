@@ -7,7 +7,7 @@ import ContractsFooter from './components/ContractsFooter';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#F8F8F8] font-plus-jakarta antialiased overflow-x-hidden">
+    <div className="relative min-h-screen bg-[#FFFFFF] font-plus-jakarta antialiased overflow-x-hidden">
       {/* Floating Island Navbar */}
       <Navbar />
 

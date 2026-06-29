@@ -5,7 +5,7 @@ export default function Hero() {
   const containerRef = useRef(null);
   const textGroupRef = useRef(null);
 
-  const whatsappUrl = "https://wa.me/5531998102577?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
+  const whatsappUrl = "https://wa.me/5531992134194?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -74,7 +74,7 @@ export default function Hero() {
     <section 
       id="hero"
       ref={containerRef}
-      className="relative w-full h-[100dvh] flex items-end justify-start overflow-hidden bg-[#1A2B3C] select-none"
+      className="relative w-full h-[100dvh] flex items-end justify-start overflow-hidden bg-[#0F4A2C] select-none"
     >
       {/* Background Image with Parallax & Color Overlay */}
       <div className="absolute inset-0 z-0">
@@ -83,16 +83,16 @@ export default function Hero() {
           alt="Modern Architecture Condominium"
           className="w-full h-full object-cover scale-105 select-none pointer-events-none"
         />
-        {/* Steel Blue to Night Blue Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#1A2B3C] via-[#1A2B3C]/80 to-[#4682B4]/40 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A2B3C] via-transparent to-transparent opacity-90"></div>
+        {/* Moss Green Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#0F4A2C] via-[#0F4A2C]/80 to-[#E0E4E1]/20 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F4A2C] via-transparent to-transparent opacity-90"></div>
         {/* Technical Grid Blueprint Overlay */}
         <div 
           className="absolute inset-0 opacity-15 pointer-events-none"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(0, 85, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(0, 85, 212, 0.1) 1px, transparent 1px)
+              linear-gradient(to right, rgba(15, 74, 44, 0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(15, 74, 44, 0.2) 1px, transparent 1px)
             `,
             backgroundSize: '40px 40px'
           }}
@@ -105,28 +105,28 @@ export default function Hero() {
         className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 pb-16 md:pb-24 flex flex-col items-start"
       >
         {/* Subtle Tech Badge */}
-        <div className="hero-badge flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0055D4]/20 border border-[#0055D4]/30 backdrop-blur-md mb-6">
-          <span className="w-2 h-2 rounded-full bg-[#0055D4] animate-pulse"></span>
-          <span className="text-[10px] md:text-xs font-jetbrains font-semibold tracking-wider text-[#F8F8F8] uppercase">
+        <div className="hero-badge flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0F4A2C]/20 border border-[#0F4A2C]/30 backdrop-blur-md mb-6">
+          <span className="w-2 h-2 rounded-full bg-[#0F4A2C] animate-pulse"></span>
+          <span className="text-[10px] md:text-xs font-jetbrains font-semibold tracking-wider text-white uppercase">
             Climatização Residencial e Comercial
           </span>
         </div>
 
         {/* Massive Typography Hero Text */}
         <h1 className="flex flex-col gap-2 max-w-4xl font-outfit text-white">
-          <span className="hero-line text-xs md:text-sm font-jetbrains font-medium tracking-[0.25em] text-cyan-400 uppercase">
+          <span className="hero-line text-xs md:text-sm font-jetbrains font-medium tracking-[0.25em] text-[#E0E4E1] uppercase">
             Conforto e Saúde para sua Família
           </span>
 
           <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] uppercase">
             O clima perfeito,
           </span>
-          <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-[#4682B4] italic uppercase">
+          <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-[#E0E4E1] italic uppercase">
             Sem dor de cabeça.
           </span>
         </h1>
 
-        <p className="hero-line max-w-2xl text-sm md:text-base text-[#F8F8F8]/80 font-plus-jakarta mt-6 leading-relaxed text-left">
+        <p className="hero-line max-w-2xl text-sm md:text-base text-white/80 font-plus-jakarta mt-6 leading-relaxed text-left">
           Cuidamos do ar que você respira. Seja para instalar um equipamento novo, resolver uma falha ou fazer aquela limpeza essencial, garantimos um ambiente climatizado e confortável.
         </p>
 
@@ -136,7 +136,7 @@ export default function Hero() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="magnetic-btn relative overflow-hidden bg-[#0055D4] text-white hover:bg-[#0055D4]/90 px-8 py-3.5 rounded-full font-outfit text-sm font-bold tracking-wide shadow-lg shadow-[#0055D4]/20 hover:scale-105 transition-all duration-300"
+            className="magnetic-btn relative overflow-hidden bg-[#0F4A2C] text-white hover:bg-[#0F4A2C]/90 px-8 py-3.5 rounded-full font-outfit text-sm font-bold tracking-wide shadow-lg shadow-[#0F4A2C]/20 hover:scale-105 transition-all duration-300"
           >
             Falar com um Especialista
           </a>
@@ -150,7 +150,7 @@ export default function Hero() {
           Scroll
         </span>
         <div className="w-6 h-10 rounded-full border border-white/30 flex justify-center items-start p-1.5">
-          <div className="scroll-arrow w-1 h-2 rounded-full bg-[#0055D4]"></div>
+          <div className="scroll-arrow w-1 h-2 rounded-full bg-[#0F4A2C]"></div>
         </div>
       </div>
     </section>
