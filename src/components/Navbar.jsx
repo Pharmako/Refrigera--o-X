@@ -29,7 +29,7 @@ export default function Navbar() {
         {/* Brand Logo & Emblem */}
         <a href="#hero" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
           {/* Glowing Premium Vector F Logo */}
-          <div className="relative w-10 h-10 flex-shrink-0">
+          <div className="relative w-11 h-11 flex-shrink-0">
             <svg 
               viewBox="0 0 120 108" 
               className="w-full h-full transition-transform duration-500 group-hover:scale-105"
@@ -37,18 +37,18 @@ export default function Navbar() {
               {/* Tilted green oval */}
               <ellipse cx="60" cy="54" rx="48" ry="38" transform="rotate(-15 60 54)" fill="#0F4A2C" />
               
-              {/* Stylized F - left piece */}
-              <path d="M 38 72 L 50 36 L 58 36 L 46 72 Z" fill="#E6F4EA" opacity="0.9" />
+              {/* Stylized F - left piece (larger) */}
+              <path d="M 33.5 78 L 49.5 30 L 59.5 30 L 43.5 78 Z" fill="#E6F4EA" opacity="0.9" />
               
-              {/* Stylized F - right piece */}
-              <path d="M 48 72 L 60 36 L 86 36 L 82 46 L 64.67 46 L 61.33 56 L 76 56 L 72 64 L 58.67 64 L 56 72 Z" fill="#FFFFFF" />
+              {/* Stylized F - right piece (larger) */}
+              <path d="M 46 78 L 62 30 L 94 30 L 89 43 L 67.67 43 L 63.67 55 L 84 55 L 80 65 L 60.33 65 L 56 78 Z" fill="#FFFFFF" />
             </svg>
             <div className="absolute inset-0 bg-[#0F4A2C] blur-xl opacity-20 rounded-full group-hover:opacity-40 transition-opacity"></div>
           </div>
 
           <div className="flex flex-col text-left">
-            <span className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight leading-none text-white">
-              Frioar
+            <span className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight leading-none text-white uppercase">
+              FRIOAR
             </span>
             <span className="text-[7px] md:text-[8px] font-jetbrains font-medium tracking-wide uppercase opacity-75 mt-0.5 max-w-[120px] sm:max-w-[200px] leading-tight text-white/90">
               Engenharia Térmica e Climatização

@@ -13,21 +13,23 @@ export default function ContractsFooter() {
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 flex-shrink-0">
+              <div className="w-9 h-9 flex-shrink-0">
                 <svg viewBox="0 0 120 108" className="w-full h-full">
                   {/* Inverted white oval for dark footer background */}
                   <ellipse cx="60" cy="54" rx="48" ry="38" transform="rotate(-15 60 54)" fill="#FFFFFF" />
-                  <path d="M 38 72 L 50 36 L 58 36 L 46 72 Z" fill="#0F4A2C" />
-                  <path d="M 48 72 L 60 36 L 86 36 L 82 46 L 64.67 46 L 61.33 56 L 76 56 L 72 64 L 58.67 64 L 56 72 Z" fill="#0F4A2C" />
+                  {/* Stylized F - left piece (larger) */}
+                  <path d="M 33.5 78 L 49.5 30 L 59.5 30 L 43.5 78 Z" fill="#0F4A2C" />
+                  {/* Stylized F - right piece (larger) */}
+                  <path d="M 46 78 L 62 30 L 94 30 L 89 43 L 67.67 43 L 63.67 55 L 84 55 L 80 65 L 60.33 65 L 56 78 Z" fill="#0F4A2C" />
                 </svg>
               </div>
-              <span className="text-2xl font-outfit font-extrabold tracking-tight text-white">Frioar</span>
+              <span className="text-2xl font-outfit font-extrabold tracking-tight text-white uppercase">FRIOAR</span>
             </div>
             <p className="text-xs text-[#E0E4E1]/80 font-plus-jakarta leading-relaxed max-w-xs">
               Engenharia Térmica Avançada projetada para garantir o clima exato em residências de alto padrão e comércios de precisão.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              <span className="text-[10px] font-jetbrains text-[#E0E4E1] uppercase tracking-wider block">Frioar Engenharia Ltda © 2026</span>
+              <span className="text-[10px] font-jetbrains text-[#E0E4E1] uppercase tracking-wider block">FRIOAR ENGENHARIA LTDA © 2026</span>
             </div>
           </div>
 

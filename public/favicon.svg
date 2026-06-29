@@ -1,17 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <style>
-    polygon.outer { stroke: #1A2B3C; }
-    path.wave-white { stroke: #1A2B3C; }
-    @media (prefers-color-scheme: dark) {
-      polygon.outer { stroke: #F8F8F8; }
-      path.wave-white { stroke: #F8F8F8; }
-    }
-  </style>
-  <polygon class="outer" points="50,10 85,30 85,70 50,90 15,70 15,30" fill="none" stroke-width="6" />
-  <polygon points="50,20 76,35 76,65 50,80 24,65 24,35" fill="none" stroke="#0055D4" stroke-width="4.5" opacity="0.9" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 108" fill="none">
+  <!-- Tilted green oval -->
+  <ellipse cx="60" cy="54" rx="48" ry="38" transform="rotate(-15 60 54)" fill="#0F4A2C" />
   
-  <path d="M 28,45 C 38,38 42,52 50,45 C 58,38 62,52 72,45" fill="none" stroke="#0055D4" stroke-width="6" stroke-linecap="round" />
-  <path class="wave-white" d="M 28,55 C 38,48 42,62 50,55 C 58,48 62,62 72,55" fill="none" stroke-width="4.5" stroke-linecap="round" opacity="0.8" />
+  <!-- Stylized F - left piece -->
+  <path d="M 33.5 78 L 49.5 30 L 59.5 30 L 43.5 78 Z" fill="#E6F4EA" opacity="0.9" />
   
-  <circle cx="50" cy="50" r="8" fill="#0055D4" />
+  <!-- Stylized F - right piece -->
+  <path d="M 46 78 L 62 30 L 94 30 L 89 43 L 67.67 43 L 63.67 55 L 84 55 L 80 65 L 60.33 65 L 56 78 Z" fill="#FFFFFF" />
 </svg>
