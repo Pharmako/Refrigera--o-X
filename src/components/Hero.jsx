@@ -74,7 +74,7 @@ export default function Hero() {
     <section 
       id="hero"
       ref={containerRef}
-      className="relative w-full h-[100dvh] flex items-end justify-start overflow-hidden bg-[#0B2136] select-none"
+      className="relative w-full min-h-[100dvh] flex flex-col justify-end items-start overflow-hidden bg-[#0B2136] select-none"
     >
       {/* Background Image with Parallax & Color Overlay */}
       <div className="absolute inset-0 z-0">
@@ -102,7 +102,7 @@ export default function Hero() {
       {/* Hero Content (Pushed to bottom-left third) */}
       <div 
         ref={textGroupRef}
-        className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 pb-16 md:pb-24 flex flex-col items-start"
+        className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 pt-32 pb-16 md:pb-24 flex flex-col items-start mt-auto"
       >
         {/* Subtle Tech Badge */}
         <div className="hero-badge flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0082C6]/15 border border-[#0082C6]/30 backdrop-blur-md mb-6">
@@ -113,16 +113,16 @@ export default function Hero() {
         </div>
 
         {/* Massive Typography Hero Text */}
-        <h1 className="flex flex-col gap-2 max-w-4xl font-outfit text-white">
-          <span className="hero-line text-xs md:text-sm font-jetbrains font-medium tracking-[0.25em] text-[#0082C6] uppercase">
+        <h1 className="flex flex-col gap-1 sm:gap-2 max-w-4xl font-outfit text-white">
+          <span className="hero-line text-[10px] sm:text-xs md:text-sm font-jetbrains font-medium tracking-[0.25em] text-[#0082C6] uppercase mb-1">
             Tecnologia em Conforto Térmico
           </span>
 
-          <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] uppercase">
-            Climatização Corporativa e
+          <span className="hero-line text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] uppercase">
+            Climatização Corporativa
           </span>
-          <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-[#0082C6] italic uppercase">
-            Residencial de Alto Padrão.
+          <span className="hero-line text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] text-[#0082C6] italic">
+            e Residencial de Alto Padrão.
           </span>
         </h1>
 
