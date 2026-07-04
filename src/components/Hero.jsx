@@ -5,7 +5,7 @@ export default function Hero() {
   const containerRef = useRef(null);
   const textGroupRef = useRef(null);
 
-  const whatsappUrl = "https://wa.me/5531992134194?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
+  const whatsappUrl = "https://wa.me/5531993014013?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -119,15 +119,15 @@ export default function Hero() {
           </span>
 
           <span className="hero-line text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] uppercase">
-            Climatização Corporativa
+            Especialistas em
           </span>
-          <span className="hero-line text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] text-[#0082C6] italic">
-            e Residencial de Alto Padrão.
+          <span className="hero-line text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] text-[#0082C6] italic uppercase">
+            Climatização
           </span>
         </h1>
 
         <p className="hero-line max-w-2xl text-sm md:text-base text-white/80 font-plus-jakarta mt-6 leading-relaxed text-left">
-          Infraestrutura térmica robusta para clínicas, comércios e residências. O conforto que você merece, com a qualidade técnica que o seu negócio exige.
+          Instalação, manutenção e higienização com rigor técnico. Garantimos a temperatura ideal e a pureza do ar que a sua família e o seu negócio merecem.
         </p>
 
         {/* Action Button & Trust Bar */}

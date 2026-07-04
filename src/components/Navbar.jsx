@@ -15,7 +15,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const whatsappUrl = "https://wa.me/5531992134194?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
+  const whatsappUrl = "https://wa.me/5531993014013?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
 
   return (
     <nav className="fixed top-6 left-0 right-0 z-50 px-4 md:px-8 flex justify-center transition-all duration-500">

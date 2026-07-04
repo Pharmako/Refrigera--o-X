@@ -1,10 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 108" fill="none">
-  <!-- Tilted green oval -->
-  <ellipse cx="60" cy="54" rx="48" ry="38" transform="rotate(-15 60 54)" fill="#0F4A2C" />
-  
-  <!-- Stylized F - left piece -->
-  <path d="M 33.5 78 L 49.5 30 L 59.5 30 L 43.5 78 Z" fill="#E6F4EA" opacity="0.9" />
-  
-  <!-- Stylized F - right piece -->
-  <path d="M 46 78 L 62 30 L 94 30 L 89 43 L 67.67 43 L 63.67 55 L 84 55 L 80 65 L 60.33 65 L 56 78 Z" fill="#FFFFFF" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="favFrostBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A2F3" />
+      <stop offset="100%" stop-color="#0082C6" />
+    </linearGradient>
+    <linearGradient id="favSunOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA834" />
+      <stop offset="100%" stop-color="#F27C00" />
+    </linearGradient>
+    <!-- Half snowflake branch -->
+    <g id="fav-snowflake-branch">
+      <line x1="48" y1="50" x2="18" y2="50" stroke="url(#favFrostBlueGrad)" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M 34,50 L 27,43 M 34,50 L 27,57" stroke="url(#favFrostBlueGrad)" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M 23,50 L 19,45 M 23,50 L 19,55" stroke="url(#favFrostBlueGrad)" stroke-width="2" stroke-linecap="round" />
+    </g>
+  </defs>
+
+  <!-- Left Side: Snowflake (Frost Blue) -->
+  <path d="M 48,15 L 48,85" stroke="url(#favFrostBlueGrad)" stroke-width="4" stroke-linecap="round" />
+  <use href="#fav-snowflake-branch" />
+  <use href="#fav-snowflake-branch" transform="rotate(45 48 50)" />
+  <use href="#fav-snowflake-branch" transform="rotate(-45 48 50)" />
+
+  <!-- Right Side: Sun (Sun Orange) -->
+  <path d="M 52,28 A 22,22 0 0,1 52,72 Z" fill="url(#favSunOrangeGrad)" />
+  <path d="M 58 29 L 69 17 L 63 34 Z" fill="url(#favSunOrangeGrad)" />
+  <path d="M 67 36 L 83 31 L 71 41 Z" fill="url(#favSunOrangeGrad)" />
+  <path d="M 72 47 L 88 50 L 72 53 Z" fill="url(#favSunOrangeGrad)" />
+  <path d="M 71 59 L 83 69 L 67 64 Z" fill="url(#favSunOrangeGrad)" />
+  <path d="M 63 66 L 69 83 L 58 71 Z" fill="url(#favSunOrangeGrad)" />
+
+  <!-- Dotted outer arc around sun -->
+  <path d="M 52,10 A 40,40 0 0,1 52,90" fill="none" stroke="url(#favSunOrangeGrad)" stroke-width="2.5" stroke-dasharray="4 5" stroke-linecap="round" />
 </svg>

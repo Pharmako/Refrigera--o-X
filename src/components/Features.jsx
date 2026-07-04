@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { Settings, Calendar, Check, Cpu } from 'lucide-react';
+import { Settings, Calendar, Check } from 'lucide-react';
 
 export default function Features() {
   // CARD 1: Diagnostic Shuffler State (Instalação Split e Cassete/K7)
@@ -23,13 +23,35 @@ export default function Features() {
     return () => clearInterval(timer);
   }, []);
 
-  // CARD 2: Mock Cursor Protocol Scheduler (Infraestrutura e Pré-disposição)
+  // CARD 2: Checklist de Manutenção (Manutenção Preventiva Comercial e Higienização)
+  const checklistItems = [
+    { label: 'DIAGNÓSTICO', text: 'Avaliação de pressão do gás R410a/R22...' },
+    { label: 'HIGIENIZAÇÃO', text: 'Limpeza química da serpentina e filtros...' },
+    { label: 'ESTERILIZAÇÃO', text: 'Aplicação de bactericida premium PMOC...' },
+    { label: 'FLUXO', text: 'Desobstrução do sistema de dreno...' },
+    { label: 'EFICIÊNCIA', text: 'Sistema certificado operando com economia ❄️' },
+  ];
+  const [checkedCount, setCheckedCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCheckedCount((prev) => {
+        if (prev >= checklistItems.length) {
+          return 0; // reset loop
+        }
+        return prev + 1;
+      });
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  // CARD 3: Mock Cursor Protocol Scheduler (Infraestrutura e Pré-disposição)
   const schedulerRef = useRef(null);
   const cursorRef = useRef(null);
   const [activeDay, setActiveDay] = useState(null); // 'Q' (Wednesday) will be clicked
   const [isSaved, setIsSaved] = useState(false);
 
-  const whatsappUrl = "https://wa.me/5531992134194?text=Ol%C3%A1%21+Gostaria+de+agendar+um+orcamento+para+infraestrutura.";
+  const whatsappUrl = "https://wa.me/5531993014013?text=Ol%C3%A1%21+Gostaria+de+agendar+um+orcamento+para+infraestrutura.";
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -105,54 +127,6 @@ export default function Features() {
     return () => ctx.revert();
   }, []);
 
-  // CARD 3: Checklist de Manutenção (Manutenção Preventiva Comercial e Higienização)
-  const checklistItems = [
-    { label: 'DIAGNÓSTICO', text: 'Avaliação de pressão do gás R410a/R22...' },
-    { label: 'HIGIENIZAÇÃO', text: 'Limpeza química da serpentina e filtros...' },
-    { label: 'ESTERILIZAÇÃO', text: 'Aplicação de bactericida premium PMOC...' },
-    { label: 'FLUXO', text: 'Desobstrução do sistema de dreno...' },
-    { label: 'EFICIÊNCIA', text: 'Sistema certificado operando com economia ❄️' },
-  ];
-  const [checkedCount, setCheckedCount] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCheckedCount((prev) => {
-        if (prev >= checklistItems.length) {
-          return 0; // reset loop
-        }
-        return prev + 1;
-      });
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
-  // CARD 4: Temperature Telemetry Monitor (Manutenção em Freezers e Expositores)
-  const [telemetryTemp, setTelemetryTemp] = useState(-12.4);
-  const [sensorStatus, setSensorStatus] = useState('COOLING');
-
-  useEffect(() => {
-    const tempInterval = setInterval(() => {
-      setTelemetryTemp((prev) => {
-        if (prev > -18.0) {
-          // Cool down phase
-          setSensorStatus('COOLING');
-          return parseFloat((prev - 0.6).toFixed(1));
-        } else {
-          // Fluctuating state once at temp
-          setSensorStatus('OPTIMAL');
-          const variance = (Math.random() - 0.5) * 0.4;
-          let next = prev + variance;
-          if (next > -17.5) next = -17.5;
-          if (next < -18.8) next = -18.8;
-          return parseFloat(next.toFixed(1));
-        }
-      });
-    }, 1200);
-
-    return () => clearInterval(tempInterval);
-  }, []);
-
   return (
     <section id="features" className="w-full py-24 md:py-32 bg-[#FFFFFF] relative overflow-hidden select-none">
       {/* Title Section */}
@@ -167,8 +141,8 @@ export default function Features() {
         </div>
       </div>
 
-      {/* Bento Grid of 4 Interactive Cards */}
-      <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      {/* Grid of 3 Interactive Cards */}
+      <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         
         {/* Card 1: Instalação de Ar Condicionado (Split e Cassete/K7) */}
         <div className="rounded-[2.5rem] bg-[#EBF1F6] p-8 md:p-10 flex flex-col justify-between border border-[#0082C6]/10 shadow-lg text-[#1E293B] relative h-[460px] overflow-hidden">
@@ -222,7 +196,77 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Card 2: Infraestrutura e Pré-disposição (Mock Cursor Scheduler) */}
+        {/* Card 2: Manutenção Preventiva Comercial e Higienização (Checklist) */}
+        <div className="rounded-[2.5rem] bg-[#EBF1F6] p-8 md:p-10 flex flex-col justify-between border border-[#0082C6]/10 shadow-lg text-[#1E293B] h-[460px]">
+          <div>
+            <div className="flex items-center justify-between mb-8">
+              <span className="text-[10px] font-jetbrains tracking-wider text-[#F27C00] uppercase font-bold">
+                SERVIÇO 02 // PREVENÇÃO
+              </span>
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F27C00] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F27C00]"></span>
+                </span>
+                <span className="text-[10px] font-jetbrains font-semibold text-[#F27C00] tracking-widest uppercase">
+                  PMOC ATIVO
+                </span>
+              </div>
+            </div>
+            
+            <h3 className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight mb-2 uppercase text-left text-[#1E293B]">
+              Manutenção Preventiva & Higienização
+            </h3>
+            <p className="text-xs text-[#1E293B]/70 font-plus-jakarta mb-4 text-left">
+              Atendimento às normas sanitárias e planos PMOC para escritórios e lojas. Ar limpo e consumo elétrico reduzido.
+            </p>
+          </div>
+
+          {/* Checklist Area */}
+          <div className="flex-1 flex flex-col bg-white rounded-2xl p-5 border border-[#EBF1F6] justify-center gap-3.5 overflow-hidden max-h-[220px]">
+            {checklistItems.map((item, idx) => {
+              const isChecked = idx < checkedCount;
+              const isCurrent = idx === checkedCount;
+              return (
+                <div 
+                  key={idx} 
+                  className={`flex items-center gap-3 transition-all duration-500 text-left ${
+                    isChecked 
+                      ? 'opacity-100' 
+                      : isCurrent 
+                        ? 'opacity-90 scale-[1.01]' 
+                        : 'opacity-35'
+                  }`}
+                >
+                  {/* Styled Checkbox Square */}
+                  <div 
+                    className={`w-5 h-5 rounded flex items-center justify-center flex-shrink-0 transition-all duration-500 border ${
+                      isChecked 
+                        ? 'bg-[#F27C00] border-[#F27C00] text-white scale-110 shadow-md shadow-[#F27C00]/20' 
+                        : isCurrent
+                          ? 'border-[#F27C00] bg-[#F27C00]/10 animate-pulse'
+                          : 'border-[#1E293B]/30 bg-transparent'
+                    }`}
+                  >
+                    {isChecked && <Check className="w-3.5 h-3.5 stroke-[3]" />}
+                  </div>
+
+                  {/* Checklist Text */}
+                  <div className="font-jetbrains text-[10px] md:text-xs">
+                    <span className={`font-extrabold uppercase mr-1.5 ${
+                      isChecked ? 'text-[#F27C00]' : isCurrent ? 'text-[#F27C00]/90' : 'text-[#1E293B]/60'
+                    }`}>
+                      {item.label}:
+                    </span>
+                    <span className="text-[#1E293B] font-medium">{item.text}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Card 3: Infraestrutura e Pré-disposição (Mock Cursor Scheduler - CTA button card) */}
         <div 
           ref={schedulerRef}
           className="rounded-[2.5rem] bg-[#EBF1F6] p-8 md:p-10 flex flex-col justify-between border border-[#0082C6]/10 shadow-lg text-[#1E293B] h-[460px] relative overflow-hidden"
@@ -230,7 +274,7 @@ export default function Features() {
           <div>
             <div className="flex items-center justify-between mb-8">
               <span className="text-[10px] font-jetbrains tracking-wider text-[#0082C6] uppercase font-bold">
-                SERVIÇO 02 // PLANEJAMENTO
+                SERVIÇO 03 // PLANEJAMENTO
               </span>
               <Calendar className="w-5 h-5 text-[#0082C6]" />
             </div>
@@ -296,147 +340,6 @@ export default function Features() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 3: Manutenção Preventiva Comercial e Higienização (Checklist) */}
-        <div className="rounded-[2.5rem] bg-[#EBF1F6] p-8 md:p-10 flex flex-col justify-between border border-[#0082C6]/10 shadow-lg text-[#1E293B] h-[460px]">
-          <div>
-            <div className="flex items-center justify-between mb-8">
-              <span className="text-[10px] font-jetbrains tracking-wider text-[#F27C00] uppercase font-bold">
-                SERVIÇO 03 // PREVENÇÃO
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F27C00] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F27C00]"></span>
-                </span>
-                <span className="text-[10px] font-jetbrains font-semibold text-[#F27C00] tracking-widest uppercase">
-                  PMOC ATIVO
-                </span>
-              </div>
-            </div>
-            
-            <h3 className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight mb-2 uppercase text-left text-[#1E293B]">
-              Manutenção Preventiva & Higienização
-            </h3>
-            <p className="text-xs text-[#1E293B]/70 font-plus-jakarta mb-4 text-left">
-              Atendimento às normas sanitárias e planos PMOC para escritórios e lojas. Ar limpo e consumo elétrico reduzido.
-            </p>
-          </div>
-
-          {/* Checklist Area */}
-          <div className="flex-1 flex flex-col bg-white rounded-2xl p-5 border border-[#EBF1F6] justify-center gap-3.5 overflow-hidden max-h-[220px]">
-            {checklistItems.map((item, idx) => {
-              const isChecked = idx < checkedCount;
-              const isCurrent = idx === checkedCount;
-              return (
-                <div 
-                  key={idx} 
-                  className={`flex items-center gap-3 transition-all duration-500 text-left ${
-                    isChecked 
-                      ? 'opacity-100' 
-                      : isCurrent 
-                        ? 'opacity-90 scale-[1.01]' 
-                        : 'opacity-35'
-                  }`}
-                >
-                  {/* Styled Checkbox Square */}
-                  <div 
-                    className={`w-5 h-5 rounded flex items-center justify-center flex-shrink-0 transition-all duration-500 border ${
-                      isChecked 
-                        ? 'bg-[#F27C00] border-[#F27C00] text-white scale-110 shadow-md shadow-[#F27C00]/20' 
-                        : isCurrent
-                          ? 'border-[#F27C00] bg-[#F27C00]/10 animate-pulse'
-                          : 'border-[#1E293B]/30 bg-transparent'
-                    }`}
-                  >
-                    {isChecked && <Check className="w-3.5 h-3.5 stroke-[3]" />}
-                  </div>
-
-                  {/* Checklist Text */}
-                  <div className="font-jetbrains text-[10px] md:text-xs">
-                    <span className={`font-extrabold uppercase mr-1.5 ${
-                      isChecked ? 'text-[#F27C00]' : isCurrent ? 'text-[#F27C00]/90' : 'text-[#1E293B]/60'
-                    }`}>
-                      {item.label}:
-                    </span>
-                    <span className="text-[#1E293B] font-medium">{item.text}</span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Card 4: Manutenção em Freezers e Expositores (Temperature Telemetry Monitor) */}
-        <div className="rounded-[2.5rem] bg-[#EBF1F6] p-8 md:p-10 flex flex-col justify-between border border-[#0082C6]/10 shadow-lg text-[#1E293B] h-[460px] relative overflow-hidden">
-          <div>
-            <div className="flex items-center justify-between mb-8">
-              <span className="text-[10px] font-jetbrains tracking-wider text-[#0082C6] uppercase font-bold">
-                SERVIÇO 04 // REFRIGERAÇÃO
-              </span>
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] font-jetbrains font-semibold text-[#0082C6] tracking-widest uppercase">
-                  TELEMETRIA
-                </span>
-              </div>
-            </div>
-            
-            <h3 className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight mb-2 uppercase text-left">
-              Freezers & Expositores Comerciais
-            </h3>
-            <p className="text-xs text-[#1E293B]/70 font-plus-jakarta mb-4 text-left">
-              Manutenção corretiva e preventiva de alta precisão em câmaras, balcões frios e expositores de congelados.
-            </p>
-          </div>
-
-          {/* Controller and Telemetry Dashboard UI */}
-          <div className="relative flex-1 flex flex-col bg-[#0B2136] rounded-2xl p-4 border border-[#0082C6]/30 text-white font-jetbrains max-h-[220px] justify-between shadow-inner">
-            <div className="absolute inset-0 bg-[radial-gradient(rgba(0,130,198,0.15)_1px,transparent_1px)] [background-size:12px_12px] opacity-20 pointer-events-none rounded-2xl"></div>
-            
-            {/* Header info */}
-            <div className="flex items-center justify-between border-b border-[#0082C6]/20 pb-2 text-[8px] z-10 text-white/70">
-              <span>CONTROLLER: F-EXPOSITOR-04</span>
-              <div className="flex items-center gap-1">
-                <span className={`w-1.5 h-1.5 rounded-full ${sensorStatus === 'OPTIMAL' ? 'bg-emerald-400 animate-pulse' : 'bg-[#F27C00] animate-ping'}`}></span>
-                <span className={sensorStatus === 'OPTIMAL' ? 'text-emerald-400 font-bold' : 'text-[#F27C00] font-bold'}>{sensorStatus}</span>
-              </div>
-            </div>
-
-            {/* Live readout */}
-            <div className="flex items-center justify-between py-2 z-10">
-              <div className="flex flex-col">
-                <span className="text-[8px] text-white/50 uppercase">Temperatura Sensor</span>
-                <span className="text-3xl md:text-4xl font-extrabold text-[#FFA834] tracking-tight tabular-nums select-all">
-                  {telemetryTemp.toFixed(1)}°C
-                </span>
-              </div>
-              <div className="text-right flex flex-col justify-end">
-                <span className="text-[8px] text-white/50 uppercase">Set Point</span>
-                <span className="text-xs font-bold text-white">-18.0°C</span>
-              </div>
-            </div>
-
-            {/* Status bars & sensors */}
-            <div className="grid grid-cols-2 gap-2 text-[8px] border-t border-[#0082C6]/20 pt-2 z-10 text-white/90">
-              <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                COMPRESSOR: ACTIVE
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                VENTILAÇÃO: 100%
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
-                DEGELO: INATIVO
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                TENSÃO: 220V ESTÁVEL
-              </div>
             </div>
           </div>
         </div>
