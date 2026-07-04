@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0F4A2C;
+  --color-primary: #0B2136;
   --color-layout-bg: #FFFFFF;
-  --color-secondary: #E0E4E1;
-  --color-text-main: #1A1A1A;
+  --color-secondary: #EBF1F6;
+  --color-text-main: #1E293B;
 
   /* Legacy mappings to preserve compatibility with existing layout utility styles */
   --color-ice-gray: #FFFFFF;
-  --color-steel-blue: #E0E4E1;
-  --color-night-blue: #0F4A2C;
-  --color-cobalt: #0F4A2C;
-  --color-charcoal: #1A1A1A;
+  --color-steel-blue: #EBF1F6;
+  --color-night-blue: #0B2136;
+  --color-cobalt: #0082C6;
+  --color-charcoal: #1E293B;
 
   --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
   --font-outfit: "Outfit", sans-serif;
@@ -33,10 +33,10 @@ body {
 }
 
 .glass-panel-dark {
-  background: rgba(15, 74, 44, 0.7);
+  background: rgba(11, 33, 54, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(224, 228, 225, 0.2);
+  border: 1px solid rgba(235, 241, 246, 0.2);
 }
 
 /* CSS Noise Overlay */
@@ -70,11 +70,11 @@ body {
   background: #FFFFFF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E0E4E1;
+  background: #EBF1F6;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0F4A2C;
+  background: #0082C6;
 }
 
 /* Magnetic Button Slide Animation */

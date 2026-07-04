@@ -74,25 +74,25 @@ export default function Hero() {
     <section 
       id="hero"
       ref={containerRef}
-      className="relative w-full h-[100dvh] flex items-end justify-start overflow-hidden bg-[#0F4A2C] select-none"
+      className="relative w-full h-[100dvh] flex items-end justify-start overflow-hidden bg-[#0B2136] select-none"
     >
       {/* Background Image with Parallax & Color Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1600" 
-          alt="Modern Architecture Condominium"
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600" 
+          alt="Modern Architecture Corporate Building"
           className="w-full h-full object-cover scale-105 select-none pointer-events-none"
         />
-        {/* Moss Green Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#0F4A2C] via-[#0F4A2C]/80 to-[#E0E4E1]/20 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F4A2C] via-transparent to-transparent opacity-90"></div>
+        {/* Navy and Blue Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#0B2136] via-[#0B2136]/85 to-[#0082C6]/20 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B2136] via-transparent to-transparent opacity-95"></div>
         {/* Technical Grid Blueprint Overlay */}
         <div 
           className="absolute inset-0 opacity-15 pointer-events-none"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(15, 74, 44, 0.2) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(15, 74, 44, 0.2) 1px, transparent 1px)
+              linear-gradient(to right, rgba(11, 33, 54, 0.2) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(11, 33, 54, 0.2) 1px, transparent 1px)
             `,
             backgroundSize: '40px 40px'
           }}
@@ -105,41 +105,46 @@ export default function Hero() {
         className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 pb-16 md:pb-24 flex flex-col items-start"
       >
         {/* Subtle Tech Badge */}
-        <div className="hero-badge flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0F4A2C]/20 border border-[#0F4A2C]/30 backdrop-blur-md mb-6">
-          <span className="w-2 h-2 rounded-full bg-[#0F4A2C] animate-pulse"></span>
+        <div className="hero-badge flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0082C6]/15 border border-[#0082C6]/30 backdrop-blur-md mb-6">
+          <span className="w-2 h-2 rounded-full bg-[#0082C6] animate-pulse"></span>
           <span className="text-[10px] md:text-xs font-jetbrains font-semibold tracking-wider text-white uppercase">
-            Climatização Residencial e Comercial
+            Climatização & Engenharia Térmica
           </span>
         </div>
 
         {/* Massive Typography Hero Text */}
         <h1 className="flex flex-col gap-2 max-w-4xl font-outfit text-white">
-          <span className="hero-line text-xs md:text-sm font-jetbrains font-medium tracking-[0.25em] text-[#E0E4E1] uppercase">
-            Conforto e Saúde para sua Família
+          <span className="hero-line text-xs md:text-sm font-jetbrains font-medium tracking-[0.25em] text-[#0082C6] uppercase">
+            Tecnologia em Conforto Térmico
           </span>
 
           <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] uppercase">
-            O clima perfeito,
+            Climatização Corporativa e
           </span>
-          <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-[#E0E4E1] italic uppercase">
-            Sem dor de cabeça.
+          <span className="hero-line text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-[#0082C6] italic uppercase">
+            Residencial de Alto Padrão.
           </span>
         </h1>
 
         <p className="hero-line max-w-2xl text-sm md:text-base text-white/80 font-plus-jakarta mt-6 leading-relaxed text-left">
-          Cuidamos do ar que você respira. Seja para instalar um equipamento novo, resolver uma falha ou fazer aquela limpeza essencial, garantimos um ambiente climatizado e confortável.
+          Infraestrutura térmica robusta para clínicas, comércios e residências. O conforto que você merece, com a qualidade técnica que o seu negócio exige.
         </p>
 
-        {/* Action Button & Floating Indicator */}
-        <div className="hero-line flex flex-wrap gap-4 mt-8 items-center">
+        {/* Action Button & Trust Bar */}
+        <div className="hero-line flex flex-col gap-4 mt-8 items-start">
           <a 
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="magnetic-btn relative overflow-hidden bg-[#0F4A2C] text-white hover:bg-[#0F4A2C]/90 px-8 py-3.5 rounded-full font-outfit text-sm font-bold tracking-wide shadow-lg shadow-[#0F4A2C]/20 hover:scale-105 transition-all duration-300"
+            className="magnetic-btn relative overflow-hidden bg-[#F27C00] text-white hover:bg-[#F27C00]/90 px-8 py-3.5 rounded-full font-outfit text-sm font-bold tracking-wide shadow-lg shadow-[#F27C00]/20 hover:scale-105 transition-all duration-300"
           >
-            Falar com um Especialista
+            Solicitar Orçamento Técnico
           </a>
+          <div className="flex items-center gap-2 text-white/70 font-jetbrains text-[10px] md:text-xs tracking-wide">
+            <span>⭐ 4.8/5 no Google</span>
+            <span className="text-white/30">|</span>
+            <span>Atendimento especializado em Betim e Região.</span>
+          </div>
         </div>
       </div>
 
@@ -150,7 +155,7 @@ export default function Hero() {
           Scroll
         </span>
         <div className="w-6 h-10 rounded-full border border-white/30 flex justify-center items-start p-1.5">
-          <div className="scroll-arrow w-1 h-2 rounded-full bg-[#0F4A2C]"></div>
+          <div className="scroll-arrow w-1 h-2 rounded-full bg-[#F27C00]"></div>
         </div>
       </div>
     </section>
