@@ -118,10 +118,10 @@ export default function Hero() {
             Tecnologia em Conforto Térmico
           </span>
 
-          <span className="hero-line text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] uppercase">
+          <span className="hero-line text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1] uppercase">
             Especialistas em
           </span>
-          <span className="hero-line text-2xl sm:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.1] text-[#0082C6] italic uppercase">
+          <span className="hero-line text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-[#0082C6] italic uppercase">
             Climatização
           </span>
         </h1>

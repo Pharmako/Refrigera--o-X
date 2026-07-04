@@ -78,8 +78,10 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-col text-left">
-            <span className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight leading-none text-white uppercase">
-              InstalAr BR
+            <span className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight leading-none flex items-center">
+              <span className="text-[#F27C00]">INSTAL</span>
+              <span className="text-[#0082C6]">AR</span>
+              <span className="bg-gradient-to-r from-emerald-500 to-yellow-400 bg-clip-text text-transparent ml-1.5">BRASIL</span>
             </span>
             <span className="text-[7px] md:text-[8px] font-jetbrains font-medium tracking-wide uppercase opacity-75 mt-0.5 max-w-[120px] sm:max-w-[200px] leading-tight text-white/90">
               Climatização e Engenharia Térmica

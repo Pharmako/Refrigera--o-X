@@ -51,13 +51,17 @@ export default function ContractsFooter() {
                   <path d="M 52,10 A 40,40 0 0,1 52,90" fill="none" stroke="url(#footerSunOrangeGrad)" strokeWidth="2.5" strokeDasharray="4 5" strokeLinecap="round" />
                 </svg>
               </div>
-              <span className="text-2xl font-outfit font-extrabold tracking-tight text-white uppercase">InstalAr BR</span>
+              <span className="text-2xl font-outfit font-extrabold tracking-tight flex items-center">
+                <span className="text-[#F27C00]">INSTAL</span>
+                <span className="text-[#0082C6]">AR</span>
+                <span className="bg-gradient-to-r from-emerald-500 to-yellow-400 bg-clip-text text-transparent ml-1.5">BRASIL</span>
+              </span>
             </div>
             <p className="text-xs text-[#EBF1F6]/80 font-plus-jakarta leading-relaxed max-w-xs">
               Climatização de alto padrão e infraestrutura térmica robusta projetada para garantir o clima exato em residências e comércios de precisão.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              <span className="text-[10px] font-jetbrains text-[#EBF1F6] uppercase tracking-wider block">INSTALAR BR CLIMATIZAÇÃO LTDA © 2026</span>
+              <span className="text-[10px] font-jetbrains text-[#EBF1F6] uppercase tracking-wider block">INSTALAR BRASIL CLIMATIZAÇÃO LTDA © 2026</span>
             </div>
           </div>
 
