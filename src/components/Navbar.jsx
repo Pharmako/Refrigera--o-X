@@ -90,16 +90,13 @@ export default function Navbar() {
         </a>
 
         {/* CTA Button */}
-        <div className="flex-shrink-0">
+        <div className="flex items-center flex-shrink-0">
           <a 
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="magnetic-btn relative overflow-hidden bg-[#F27C00] hover:bg-[#F27C00]/90 text-white font-outfit text-[10px] sm:text-xs md:text-sm font-semibold px-2.5 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2.5 rounded-full shadow-md shadow-[#F27C00]/20 hover:scale-105 transition-all duration-300 whitespace-nowrap flex-shrink-0"
-          >
-            <span className="sm:hidden">WhatsApp</span>
-            <span className="hidden sm:inline">Falar no WhatsApp</span>
-          </a>
+            className="magnetic-btn relative overflow-hidden bg-[#F27C00] hover:bg-[#F27C00]/90 text-white font-outfit text-[10px] sm:text-xs md:text-sm font-semibold px-2.5 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2.5 rounded-full shadow-md shadow-[#F27C00]/20 hover:scale-105 transition-all duration-300 whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center"
+          ><span className="sm:hidden">WhatsApp</span><span className="hidden sm:inline">Falar no WhatsApp</span></a>
         </div>
       </div>
     </nav>
