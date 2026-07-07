@@ -140,17 +140,17 @@ export default function Hero() {
           >
             Solicitar Orçamento Técnico
           </a>
-          <div className="flex items-center gap-2 text-white/70 font-jetbrains text-[10px] md:text-xs tracking-wide">
-            <span>⭐ 4.8/5 no Google</span>
-            <span className="text-white/30">|</span>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-white/70 font-jetbrains text-[10px] md:text-xs tracking-wide text-left">
+            <span className="flex items-center gap-1.5">⭐ 4.8/5 no Google</span>
+            <span className="hidden sm:inline text-white/30">|</span>
             <span>Atendimento especializado em Betim e Região.</span>
           </div>
         </div>
       </div>
 
 
-      {/* Animated Scroll Indicator */}
-      <div className="scroll-indicator absolute bottom-8 right-8 md:right-12 z-10 flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors cursor-pointer">
+      {/* Animated Scroll Indicator - Hidden on mobile, visible on medium screens and up */}
+      <div className="scroll-indicator absolute bottom-8 right-8 md:right-12 z-10 hidden md:flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors cursor-pointer">
         <span className="text-[10px] font-jetbrains font-medium tracking-[0.2em] uppercase writing-mode-vertical">
           Scroll
         </span>

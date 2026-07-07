@@ -29,7 +29,7 @@ export default function Navbar() {
         {/* Brand Logo & Emblem */}
         <a href="#hero" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
           {/* Glowing Premium Vector Logo (InstalAr BR: Split Snowflake/Sun) */}
-          <div className="relative w-11 h-11 flex-shrink-0">
+          <div className="relative w-8 h-8 sm:w-9 sm:h-9 md:w-11 md:h-11 flex-shrink-0">
             <svg 
               viewBox="0 0 100 100" 
               className="w-full h-full transition-transform duration-500 group-hover:scale-105"
@@ -78,12 +78,12 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-col text-left">
-            <span className="text-xl md:text-2xl font-outfit font-extrabold tracking-tight leading-none flex items-center">
+            <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-outfit font-extrabold tracking-tight leading-none flex items-center">
               <span className="text-[#F27C00]">INSTAL</span>
               <span className="text-[#0082C6]">AR</span>
               <span className="bg-gradient-to-r from-emerald-500 to-yellow-400 bg-clip-text text-transparent ml-1.5">BRASIL</span>
             </span>
-            <span className="text-[7px] md:text-[8px] font-jetbrains font-medium tracking-wide uppercase opacity-75 mt-0.5 max-w-[120px] sm:max-w-[200px] leading-tight text-white/90">
+            <span className="hidden sm:block text-[8px] font-jetbrains font-medium tracking-wide uppercase opacity-75 mt-0.5 max-w-[200px] leading-tight text-white/90">
               Climatização e Engenharia Térmica
             </span>
           </div>
@@ -95,9 +95,10 @@ export default function Navbar() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="magnetic-btn relative overflow-hidden bg-[#F27C00] hover:bg-[#F27C00]/90 text-white font-outfit text-[11px] sm:text-xs md:text-sm font-semibold px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-2.5 rounded-full shadow-md shadow-[#F27C00]/20 hover:scale-105 transition-all duration-300 whitespace-nowrap flex-shrink-0"
+            className="magnetic-btn relative overflow-hidden bg-[#F27C00] hover:bg-[#F27C00]/90 text-white font-outfit text-[10px] sm:text-xs md:text-sm font-semibold px-2.5 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2.5 rounded-full shadow-md shadow-[#F27C00]/20 hover:scale-105 transition-all duration-300 whitespace-nowrap flex-shrink-0"
           >
-            Falar no WhatsApp
+            <span className="sm:hidden">WhatsApp</span>
+            <span className="hidden sm:inline">Falar no WhatsApp</span>
           </a>
         </div>
       </div>
