@@ -28,7 +28,7 @@ export default function Navbar() {
       >
         {/* Brand Logo & Emblem */}
         <a href="#hero" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
-          {/* Glowing Premium Vector Logo (InstalAr BR: Split Snowflake/Sun) */}
+          {/* Glowing Premium Vector Logo (ICETEC: Snowflake with Circular Arrows) */}
           <div className="relative w-8 h-8 sm:w-9 sm:h-9 md:w-11 md:h-11 flex-shrink-0">
             <svg 
               viewBox="0 0 100 100" 
@@ -36,55 +36,77 @@ export default function Navbar() {
             >
               <defs>
                 <linearGradient id="frostBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#00A2F3" />
+                  <stop offset="0%" stopColor="#00E5FF" />
+                  <stop offset="100%" stopColor="#00A2F3" />
+                </linearGradient>
+                <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#0F355C" />
                   <stop offset="100%" stopColor="#0082C6" />
                 </linearGradient>
-                <linearGradient id="sunOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FFA834" />
-                  <stop offset="100%" stopColor="#F27C00" />
-                </linearGradient>
-                {/* Half snowflake branch */}
+                {/* Snowflake single branch */}
                 <g id="nav-snowflake-branch">
-                  <line x1="48" y1="50" x2="18" y2="50" stroke="url(#frostBlueGrad)" strokeWidth="3.5" strokeLinecap="round" />
-                  <path d="M 34,50 L 27,43 M 34,50 L 27,57" stroke="url(#frostBlueGrad)" strokeWidth="2.5" strokeLinecap="round" />
-                  <path d="M 23,50 L 19,45 M 23,50 L 19,55" stroke="url(#frostBlueGrad)" strokeWidth="2" strokeLinecap="round" />
+                  <line x1="50" y1="50" x2="76" y2="50" stroke="url(#frostBlueGrad)" strokeWidth="3.5" strokeLinecap="round" />
+                  <path d="M 64,50 L 69,45 M 64,50 L 69,55" stroke="url(#frostBlueGrad)" strokeWidth="2.5" strokeLinecap="round" />
+                  <path d="M 57,50 L 61,46 M 57,50 L 61,54" stroke="url(#frostBlueGrad)" strokeWidth="2.2" strokeLinecap="round" />
                 </g>
               </defs>
 
-              {/* Left Side: Snowflake (Frost Blue) */}
-              {/* Vertical spine */}
-              <path d="M 48,15 L 48,85" stroke="url(#frostBlueGrad)" strokeWidth="4" strokeLinecap="round" />
-              {/* Horizontal branch */}
+              {/* Center Snowflake - Cyan/Light blue */}
               <use href="#nav-snowflake-branch" />
-              {/* Top-left branch at 45deg */}
-              <use href="#nav-snowflake-branch" transform="rotate(45 48 50)" />
-              {/* Bottom-left branch at 45deg */}
-              <use href="#nav-snowflake-branch" transform="rotate(-45 48 50)" />
+              <use href="#nav-snowflake-branch" transform="rotate(60 50 50)" />
+              <use href="#nav-snowflake-branch" transform="rotate(120 50 50)" />
+              <use href="#nav-snowflake-branch" transform="rotate(180 50 50)" />
+              <use href="#nav-snowflake-branch" transform="rotate(240 50 50)" />
+              <use href="#nav-snowflake-branch" transform="rotate(300 50 50)" />
 
-              {/* Right Side: Sun (Sun Orange) */}
-              {/* Half sun body */}
-              <path d="M 52,28 A 22,22 0 0,1 52,72 Z" fill="url(#sunOrangeGrad)" />
-              {/* Rays */}
-              <path d="M 58 29 L 69 17 L 63 34 Z" fill="url(#sunOrangeGrad)" />
-              <path d="M 67 36 L 83 31 L 71 41 Z" fill="url(#sunOrangeGrad)" />
-              <path d="M 72 47 L 88 50 L 72 53 Z" fill="url(#sunOrangeGrad)" />
-              <path d="M 71 59 L 83 69 L 67 64 Z" fill="url(#sunOrangeGrad)" />
-              <path d="M 63 66 L 69 83 L 58 71 Z" fill="url(#sunOrangeGrad)" />
+              {/* Circular Arrows wrapping the snowflake */}
+              {/* Top-Left Arrow */}
+              <path 
+                d="M 75.4,24.6 A 36,36 0 0,0 18.8,68.0" 
+                fill="none" 
+                stroke="url(#arrowGrad)" 
+                strokeWidth="4.5" 
+                strokeLinecap="round" 
+              />
+              {/* Arrow Head 1 */}
+              <path 
+                d="M 15,60 L 18.8,68.0 L 27,65" 
+                fill="none" 
+                stroke="url(#arrowGrad)" 
+                strokeWidth="4" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
 
-              {/* Dotted outer arc around sun */}
-              <path d="M 52,10 A 40,40 0 0,1 52,90" fill="none" stroke="url(#sunOrangeGrad)" strokeWidth="2.5" strokeDasharray="4 5" strokeLinecap="round" />
+              {/* Bottom-Right Arrow */}
+              <path 
+                d="M 24.6,75.4 A 36,36 0 0,0 81.2,32.0" 
+                fill="none" 
+                stroke="url(#arrowGrad)" 
+                strokeWidth="4.5" 
+                strokeLinecap="round" 
+              />
+              {/* Arrow Head 2 */}
+              <path 
+                d="M 73,35 L 81.2,32.0 L 85,40" 
+                fill="none" 
+                stroke="url(#arrowGrad)" 
+                strokeWidth="4" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
             </svg>
             <div className="absolute inset-0 bg-[#0082C6] blur-xl opacity-15 rounded-full group-hover:opacity-35 transition-opacity"></div>
           </div>
 
           <div className="flex flex-col text-left">
             <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-outfit font-extrabold tracking-tight leading-none flex items-center">
-              <span className="text-[#F27C00]">INSTAL</span>
-              <span className="text-[#0082C6]">AR</span>
-              <span className="bg-gradient-to-r from-emerald-500 to-yellow-400 bg-clip-text text-transparent ml-1.5">BRASIL</span>
+              <span className="text-[#00E5FF]">ICE</span>
+              <span className="text-white/40 mx-0.5 font-normal">-</span>
+              <span className="text-[#0082C6]">TEC</span>
             </span>
             <span className="hidden sm:block text-[8px] font-jetbrains font-medium tracking-wide uppercase opacity-75 mt-0.5 max-w-[200px] leading-tight text-white/90">
-              Climatização e Engenharia Térmica
+              Refrigeração e Ar-condicionado
             </span>
           </div>
         </a>

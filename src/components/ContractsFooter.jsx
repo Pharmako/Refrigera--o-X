@@ -13,55 +13,79 @@ export default function ContractsFooter() {
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              {/* Premium Vector Logo (Split Snowflake/Sun) */}
+              {/* Premium Vector Logo (ICETEC: Snowflake with Circular Arrows) */}
               <div className="w-10 h-10 flex-shrink-0">
                 <svg viewBox="0 0 100 100" className="w-full h-full">
                   <defs>
                     <linearGradient id="footerFrostBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#00A2F3" />
+                      <stop offset="0%" stopColor="#00E5FF" />
+                      <stop offset="100%" stopColor="#00A2F3" />
+                    </linearGradient>
+                    <linearGradient id="footerArrowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#0F355C" />
                       <stop offset="100%" stopColor="#0082C6" />
                     </linearGradient>
-                    <linearGradient id="footerSunOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#FFA834" />
-                      <stop offset="100%" stopColor="#F27C00" />
-                    </linearGradient>
-                    {/* Half snowflake branch */}
+                    {/* Snowflake single branch */}
                     <g id="footer-snowflake-branch">
-                      <line x1="48" y1="50" x2="18" y2="50" stroke="url(#footerFrostBlueGrad)" strokeWidth="3.5" strokeLinecap="round" />
-                      <path d="M 34,50 L 27,43 M 34,50 L 27,57" stroke="url(#footerFrostBlueGrad)" strokeWidth="2.5" strokeLinecap="round" />
-                      <path d="M 23,50 L 19,45 M 23,50 L 19,55" stroke="url(#footerFrostBlueGrad)" strokeWidth="2" strokeLinecap="round" />
+                      <line x1="50" y1="50" x2="76" y2="50" stroke="url(#footerFrostBlueGrad)" strokeWidth="3.5" strokeLinecap="round" />
+                      <path d="M 64,50 L 69,45 M 64,50 L 69,55" stroke="url(#footerFrostBlueGrad)" strokeWidth="2.5" strokeLinecap="round" />
+                      <path d="M 57,50 L 61,46 M 57,50 L 61,54" stroke="url(#footerFrostBlueGrad)" strokeWidth="2.2" strokeLinecap="round" />
                     </g>
                   </defs>
 
-                  {/* Left Side: Snowflake (Frost Blue) */}
-                  <path d="M 48,15 L 48,85" stroke="url(#footerFrostBlueGrad)" strokeWidth="4" strokeLinecap="round" />
+                  {/* Center Snowflake - Cyan/Light blue */}
                   <use href="#footer-snowflake-branch" />
-                  <use href="#footer-snowflake-branch" transform="rotate(45 48 50)" />
-                  <use href="#footer-snowflake-branch" transform="rotate(-45 48 50)" />
+                  <use href="#footer-snowflake-branch" transform="rotate(60 50 50)" />
+                  <use href="#footer-snowflake-branch" transform="rotate(120 50 50)" />
+                  <use href="#footer-snowflake-branch" transform="rotate(180 50 50)" />
+                  <use href="#footer-snowflake-branch" transform="rotate(240 50 50)" />
+                  <use href="#footer-snowflake-branch" transform="rotate(300 50 50)" />
 
-                  {/* Right Side: Sun (Sun Orange) */}
-                  <path d="M 52,28 A 22,22 0 0,1 52,72 Z" fill="url(#footerSunOrangeGrad)" />
-                  <path d="M 58 29 L 69 17 L 63 34 Z" fill="url(#footerSunOrangeGrad)" />
-                  <path d="M 67 36 L 83 31 L 71 41 Z" fill="url(#footerSunOrangeGrad)" />
-                  <path d="M 72 47 L 88 50 L 72 53 Z" fill="url(#footerSunOrangeGrad)" />
-                  <path d="M 71 59 L 83 69 L 67 64 Z" fill="url(#footerSunOrangeGrad)" />
-                  <path d="M 63 66 L 69 83 L 58 71 Z" fill="url(#footerSunOrangeGrad)" />
+                  {/* Circular Arrows wrapping the snowflake */}
+                  <path 
+                    d="M 75.4,24.6 A 36,36 0 0,0 18.8,68.0" 
+                    fill="none" 
+                    stroke="url(#footerArrowGrad)" 
+                    strokeWidth="4.5" 
+                    strokeLinecap="round" 
+                  />
+                  <path 
+                    d="M 15,60 L 18.8,68.0 L 27,65" 
+                    fill="none" 
+                    stroke="url(#footerArrowGrad)" 
+                    strokeWidth="4" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
 
-                  {/* Dotted outer arc around sun */}
-                  <path d="M 52,10 A 40,40 0 0,1 52,90" fill="none" stroke="url(#footerSunOrangeGrad)" strokeWidth="2.5" strokeDasharray="4 5" strokeLinecap="round" />
+                  <path 
+                    d="M 24.6,75.4 A 36,36 0 0,0 81.2,32.0" 
+                    fill="none" 
+                    stroke="url(#footerArrowGrad)" 
+                    strokeWidth="4.5" 
+                    strokeLinecap="round" 
+                  />
+                  <path 
+                    d="M 73,35 L 81.2,32.0 L 85,40" 
+                    fill="none" 
+                    stroke="url(#footerArrowGrad)" 
+                    strokeWidth="4" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </div>
               <span className="text-2xl font-outfit font-extrabold tracking-tight flex items-center">
-                <span className="text-[#F27C00]">INSTAL</span>
-                <span className="text-[#0082C6]">AR</span>
-                <span className="bg-gradient-to-r from-emerald-500 to-yellow-400 bg-clip-text text-transparent ml-1.5">BRASIL</span>
+                <span className="text-[#00E5FF]">ICE</span>
+                <span className="text-white/40 mx-0.5 font-normal">-</span>
+                <span className="text-[#0082C6]">TEC</span>
               </span>
             </div>
             <p className="text-xs text-[#EBF1F6]/80 font-plus-jakarta leading-relaxed max-w-xs">
               Climatização de alto padrão e infraestrutura térmica robusta projetada para garantir o clima exato em residências e comércios de precisão.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              <span className="text-[10px] font-jetbrains text-[#EBF1F6] uppercase tracking-wider block">INSTALAR BRASIL CLIMATIZAÇÃO LTDA © 2026</span>
+              <span className="text-[10px] font-jetbrains text-[#EBF1F6] uppercase tracking-wider block">ICETEC REFRIGERAÇÃO E CLIMATIZAÇÃO © 2026</span>
             </div>
           </div>
 

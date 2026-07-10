@@ -140,11 +140,6 @@ export default function Hero() {
           >
             Solicitar Orçamento Técnico
           </a>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-white/70 font-jetbrains text-[10px] md:text-xs tracking-wide text-left">
-            <span className="flex items-center gap-1.5">⭐ 4.8/5 no Google</span>
-            <span className="hidden sm:inline text-white/30">|</span>
-            <span>Atendimento especializado em Betim e Região.</span>
-          </div>
         </div>
       </div>
 
