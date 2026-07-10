@@ -5,7 +5,7 @@ export default function Hero() {
   const containerRef = useRef(null);
   const textGroupRef = useRef(null);
 
-  const whatsappUrl = "https://wa.me/5531993014013?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
+  const whatsappUrl = "https://wa.me/9999999999999?text=Ol%C3%A1%21+Gostaria+de+falar+com+um+especialista.";
 
   useEffect(() => {
     const ctx = gsap.context(() => {

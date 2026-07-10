@@ -51,7 +51,7 @@ export default function Features() {
   const [activeDay, setActiveDay] = useState(null); // 'Q' (Wednesday) will be clicked
   const [isSaved, setIsSaved] = useState(false);
 
-  const whatsappUrl = "https://wa.me/5531993014013?text=Ol%C3%A1%21+Gostaria+de+agendar+um+orcamento+para+infraestrutura.";
+  const whatsappUrl = "https://wa.me/9999999999999?text=Ol%C3%A1%21+Gostaria+de+agendar+um+orcamento+para+infraestrutura.";
 
   useEffect(() => {
     const ctx = gsap.context(() => {
